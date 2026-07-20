@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jothsna Praveena Pendyala — Professional Portfolio</title>
+<style>
+  :root{
+    --navy:#132239;
+    --navy-deep:#0b1626;
+    --ink:#1f2937;
+    --muted:#5b6472;
+    --hair:#e3e6ea;
+    --paper:#ffffff;
+    --panel:#f7f8fa;
+    --gold:#a9823a;
+    --gold-soft:#c9a96a;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Georgia","Iowan Old Style","Times New Roman",serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sans{font-family:"Helvetica Neue",Arial,"Segoe UI",sans-serif;}
+  a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--gold-soft);}
+  a:hover{color:var(--gold);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(19,34,57,0.97);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  }
+  .nav-name{font-family:"Helvetica Neue",Arial,sans-serif;color:#fff;font-weight:600;font-size:15px;letter-spacing:.03em;}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap;font-family:"Helvetica Neue",Arial,sans-serif;}
+  .nav-links a{
+    color:#cfd6e0;border-bottom:none;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 2px;border-bottom:1px solid transparent;
+  }
+  .nav-links a:hover{color:var(--gold-soft);border-bottom-color:var(--gold-soft);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    background:linear-gradient(160deg,var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff;padding:64px 24px 56px;
+  }
+  .hero-inner{
+    max-width:var(--maxw);margin:0 auto;
+    display:flex;gap:40px;align-items:center;flex-wrap:wrap;
+  }
+  .avatar{
+    width:148px;height:148px;border-radius:50%;
+    background:linear-gradient(135deg,#24395c,#0e1a2c);
+    border:2px solid var(--gold-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:44px;font-weight:600;letter-spacing:.02em;color:var(--gold-soft);
+    flex-shrink:0;
+  }
+  .hero-text{flex:1;min-width:280px;}
+  .hero-text h1{
+    font-size:clamp(28px,4vw,40px);margin:0 0 6px;font-weight:400;letter-spacing:.01em;
+  }
+  .hero-title{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    color:var(--gold-soft);font-size:15px;letter-spacing:.05em;text-transform:uppercase;margin:0 0 16px;
+  }
+  .hero-meta{
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:13.5px;color:#cfd6e0;
+    display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;
+  }
+  .hero-links{font-family:"Helvetica Neue",Arial,sans-serif;font-size:13.5px;display:flex;gap:18px;flex-wrap:wrap;}
+  .hero-links a{color:#e8ecf1;border-bottom:1px solid rgba(201,169,106,0.5);}
+  .hero-links a:hover{color:var(--gold-soft);}
+  .photo-note{
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:10.5px;color:#8a93a3;margin-top:8px;text-align:center;max-width:148px;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  main{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  section{padding:52px 0;border-bottom:1px solid var(--hair);}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin:0 0 8px;
+  }
+  h2{
+    font-size:26px;font-weight:400;margin:0 0 22px;color:var(--navy);
+    padding-bottom:10px;border-bottom:2px solid var(--navy);display:inline-block;
+  }
+  h3{font-size:18px;font-weight:600;margin:0 0 2px;color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;}
+  p{margin:0 0 14px;color:var(--ink);}
+  .lede{font-size:17.5px;color:var(--ink);max-width:820px;}
+
+  /* summary highlight strip */
+  .stat-row{
+    display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;
+  }
+  .stat{
+    flex:1;min-width:140px;background:var(--panel);border:1px solid var(--hair);border-left:3px solid var(--gold);
+    padding:16px 18px;font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+  .stat .num{font-family:Georgia,serif;font-size:24px;color:var(--navy);font-weight:700;line-height:1.1;}
+  .stat .label{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:4px;}
+
+  /* experience */
+  .job{margin-bottom:30px;}
+  .job:last-child{margin-bottom:0;}
+  .job-head{
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
+    border-bottom:1px solid var(--hair);padding-bottom:6px;margin-bottom:10px;
+  }
+  .job-role{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:16px;color:var(--navy);}
+  .job-org{font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;color:var(--muted);}
+  .job-date{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12.5px;color:var(--gold);white-space:nowrap;letter-spacing:.03em;}
+  .job-client{font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin:4px 0 8px;}
+  ul{margin:0 0 8px;padding-left:20px;}
+  li{margin-bottom:6px;color:var(--ink);}
+
+  /* education / certs grid */
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  @media(max-width:680px){.grid-2{grid-template-columns:1fr;}}
+  .edu-item{margin-bottom:16px;}
+  .edu-degree{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:14.5px;color:var(--navy);}
+  .edu-school{font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;color:var(--muted);}
+  .cert-list{list-style:none;padding:0;}
+  .cert-list li{
+    padding:10px 0 10px 0;border-bottom:1px solid var(--hair);font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;
+  }
+  .cert-list li:last-child{border-bottom:none;}
+  .cert-list .cert-org{color:var(--muted);font-size:12.5px;}
+
+  /* publications */
+  .pub{
+    display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--hair);
+  }
+  .pub:last-child{border-bottom:none;}
+  .pub-num{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--gold);font-weight:700;font-size:13px;flex-shrink:0;width:24px;}
+  .pub-text{font-size:14.5px;}
+  .pub-venue{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12.5px;color:var(--muted);}
+
+  /* awards */
+  .award-card{
+    background:var(--panel);border:1px solid var(--hair);padding:20px 22px;margin-bottom:16px;
+  }
+  .award-card h3{margin-bottom:4px;}
+  .award-meta{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12.5px;color:var(--muted);margin-bottom:10px;}
+  .award-list{list-style:none;padding:0;margin:0;}
+  .award-list li{
+    padding:10px 0;border-bottom:1px solid var(--hair);font-size:14.5px;
+  }
+  .award-list li:last-child{border-bottom:none;}
+
+  /* leadership */
+  .role-block{margin-bottom:20px;}
+  .role-org{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--navy);font-size:15px;}
+  .role-title{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:600;font-size:14px;color:var(--ink);margin-top:2px;}
+  .role-desc{font-size:14px;color:var(--muted);margin-top:4px;}
+
+  /* skills */
+  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px;}
+  @media(max-width:680px){.skill-grid{grid-template-columns:1fr;}}
+  .skill-cat{margin-bottom:6px;}
+  .skill-cat-name{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;background:var(--panel);border:1px solid var(--hair);
+    padding:4px 10px;color:var(--ink);
+  }
+
+  /* media/speaking */
+  .media-item{margin-bottom:18px;}
+  .media-item .label-sm{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;}
+
+  /* footer */
+  footer{
+    background:var(--navy-deep);color:#cfd6e0;padding:36px 24px;text-align:center;
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;
+  }
+  footer a{color:#e8ecf1;border-bottom:1px solid rgba(201,169,106,0.5);}
+  footer .updated{color:#7c8798;font-size:11.5px;margin-top:10px;}
+
+  @media print{
+    nav{position:static;}
+    section{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">JOTHSNA PRAVEENA PENDYALA</div>
+    <div class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#awards">Awards</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div class="avatar">JP</div>
+      <div class="photo-note">Photo to be added</div>
+    </div>
+    <div class="hero-text">
+      <h1>Jothsna Praveena Pendyala</h1>
+      <p class="hero-title">AI Platform Architect &nbsp;·&nbsp; Senior Data Scientist &nbsp;·&nbsp; ACM Dallas Chair &amp; Chief Editor</p>
+      <div class="hero-meta">
+        <span>Dallas, TX</span>
+        <span>774-519-9029</span>
+        <span>jothsnapraveena1421@gmail.com</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/jothsna/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="summary">
+    <p class="eyebrow">Professional Summary</p>
+    <h2>Overview</h2>
+    <p class="lede">
+      Jothsna Praveena Pendyala is an AI Platform Architect and Senior Data Scientist at Infosys, serving as the
+      principal architect of an enterprise Agentic AI platform at AT&amp;T — one of the largest telecommunications
+      companies in the United States. She architects and owns a production-scale, multi-agent AI system deployed
+      across AT&amp;T's engineering organization, built on LangGraph, Azure Kubernetes Service, and a custom MCP
+      server infrastructure.
+    </p>
+    <p>
+      Her expertise spans agentic AI systems design, Kubernetes platform engineering, LLM infrastructure, and AI
+      observability at enterprise scale. She has prior experience on Amazon's AGI team, working directly on the
+      Nova family of large language models. She is a published researcher with peer-reviewed work in IEEE, Springer,
+      and other indexed venues, an editor of a forthcoming book published by Taylor &amp; Francis, and a contributing
+      author to four books in the field of AI and data engineering.
+    </p>
+    <p>
+      She is an IEEE Senior Member, holds elected and appointed leadership roles at the Association for Computing
+      Machinery (ACM) — including Chair and Chief Editor of the ACM Dallas Chapter — and has been an invited
+      panelist at major international technology conferences including the Linux Foundation's Open Source Summit
+      North America 2026.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">13+</div><div class="label">Years combined experience</div></div>
+      <div class="stat"><div class="num">9+</div><div class="label">Peer-reviewed publications</div></div>
+      <div class="stat"><div class="num">30+</div><div class="label">Papers peer reviewed</div></div>
+      <div class="stat"><div class="num">$1.1M</div><div class="label">Annual efficiency savings delivered</div></div>
+      <div class="stat"><div class="num">7–8</div><div class="label">Engineers led at Infosys/AT&amp;T</div></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="eyebrow">Career</p>
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-role">Senior Data Scientist</span> — <span class="job-org">Infosys</span></div>
+        <div class="job-date">June 2025 – Present</div>
+      </div>
+      <div class="job-client">Client: AT&amp;T, Dallas, TX</div>
+      <ul>
+        <li>Architected and owns an enterprise Agentic AI Platform-as-a-Service (PaaS) enabling reusable multi-agent workflows across AT&amp;T's engineering organization</li>
+        <li>Designed full end-to-end system architecture: LangGraph orchestration, MCP-based tool integration, microservices backend, and Azure Kubernetes Service (AKS) deployment</li>
+        <li>Serves as product owner for the AI platform — defines requirements, prioritizes the roadmap, and drives adoption across multiple business teams</li>
+        <li>Built and manages MCP (Model Context Protocol) servers enabling seamless integration of enterprise tools, APIs, and data sources within a unified agentic platform</li>
+        <li>Developed scalable backend services using Python and FastAPI; deployed on AKS with Kubernetes autoscaling (HPA/KEDA), supporting high-concurrency, low-latency production workloads</li>
+        <li>Established full observability stack using LangSmith, Arize, and OpenTelemetry for tracing, debugging, and performance monitoring of LLM-powered systems</li>
+        <li>Implemented LLM guardrails (LiteLLM) and Veracode SAST/SCA security scanning for compliant, secure AI deployment</li>
+        <li>Manages CI/CD pipelines via Azure DevOps for automated deployments and consistent release management across environments</li>
+        <li>Directs a team of 7–8 senior data scientists; conducts daily pull request reviews and quarterly architecture reviews with authority to approve, request changes, or reject proposals</li>
+        <li>Leads stakeholder collaboration across product, engineering, and business units; drives platform adoption across the enterprise</li>
+      </ul>
+      <div class="job-client">Client: Sagesure Insurance</div>
+      <ul>
+        <li>Built intelligent agents on Infosys Agentic Foundry to automate complex data mapping and consolidation from disparate spreadsheet and PDF sources into structured formats</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-role">Machine Learning Specialist</span> — <span class="job-org">Amazon</span></div>
+        <div class="job-date">March 2025 – June 2025</div>
+      </div>
+      <div class="job-client">Amazon Nova · Artificial General Intelligence Team, Boston, MA</div>
+      <ul>
+        <li>Created and annotated over 25,000 high-quality multimodal training and evaluation examples (text, image, audio, video) for Amazon Nova large language models</li>
+        <li>Collaborated directly with Amazon scientists to design guardrail strategies — prompt rephrasing, output constraints, and filtering — contributing to a measurable 18% improvement in factual accuracy</li>
+        <li>Maintained a personal annotation accuracy score of 98%+ across all tasks</li>
+        <li>Documented 50+ edge case resolution strategies to standardize handling of complex annotation scenarios</li>
+        <li>Filed 30+ actionable UI/UX improvement tickets; 3 major platform updates were implemented as a result</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-role">Machine Learning Intern</span> — <span class="job-org">Awesome LLC</span></div>
+        <div class="job-date">May 2024 – August 2024</div>
+      </div>
+      <div class="job-client">Talk to My Energy (TTME) Project, San Diego, CA</div>
+      <ul>
+        <li>Designed and deployed a conversational AI agent using GPT-4o, AWS Bedrock, and foundation models including Claude, Mistral, and LLaMA</li>
+        <li>Engineered Retrieval-Augmented Generation (RAG) pipelines for customer tariff data retrieval; achieved 95% accuracy improvement in billing assessments</li>
+        <li>Fine-tuned GPT-4o on utility data and FAQs; delivered 20% improvement in response accuracy across 3,000+ interactions</li>
+        <li>Built ETL pipelines using AWS Glue and Redshift for model retraining; reduced manual preprocessing time by 25%</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-role">Assistant Engineer / Energy Analyst</span> — <span class="job-org">TANGEDCO</span></div>
+        <div class="job-date">June 2019 – July 2023</div>
+      </div>
+      <div class="job-client">Chennai, India · Selected after ranking #2 among ~200,000 candidates in a state-level government engineering competitive examination</div>
+      <ul>
+        <li>Developed and deployed ML models (XGBoost, Random Forest) for short-term energy demand forecasting; achieved 89% accuracy across 100,000+ records</li>
+        <li>Monitored and maintained electrical infrastructure across 200+ transformers and 4 substations using IoT-based predictive maintenance</li>
+        <li>Designed regulatory compliance reporting workflows ensuring 100% adherence to government-mandated operational performance standards</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-role">Assistant Professor</span>, Electrical and Electronics Engineering</div>
+        <div class="job-date">July 2015 – May 2019</div>
+      </div>
+      <div class="job-client">National Engineering College (Kovilpatti) · Gokaraju Rangaraju Institute of Engineering &amp; Technology (Hyderabad) · R.N.G. Patel Institute of Technology / FETR (Bardoli)</div>
+      <ul>
+        <li>Taught engineering subjects, mentored students, and guided academic projects, building a foundation in technical teaching and mentorship</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <p class="eyebrow">Academic Background</p>
+    <h2>Education &amp; Certifications</h2>
+    <div class="grid-2">
+      <div>
+        <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;">Education</h3>
+        <div class="edu-item">
+          <div class="edu-degree">M.S., Data Analytics</div>
+          <div class="edu-school">Clark University, Worcester, MA · 2023–2024 · GPA 3.9/4.0</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical and Electronics Engineering</div>
+          <div class="edu-school">Jawaharlal Nehru Technological University, Kakinada, India · 2009–2013 · GPA 3.5/4.0</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;">Certifications</h3>
+        <ul class="cert-list">
+          <li>Claude Certified AI Architect <div class="cert-org">Anthropic</div></li>
+          <li>GitHub Copilot Certified Engineer <div class="cert-org">GitHub / Microsoft</div></li>
+          <li>AWS Certified AI/ML Professional <div class="cert-org">Amazon Web Services</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <p class="eyebrow">Scholarly Output</p>
+    <h2>Research Publications</h2>
+    <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);">
+      Full list with citations: <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a>
+    </p>
+
+    <div style="margin-top:20px;">
+      <div class="pub">
+        <div class="pub-num">01</div>
+        <div class="pub-text">Pai, R.R., Pendyala, J.P. "Optimizing Healthcare Pipelines for Patient Benefit: A Data Engineering Perspective on Preauthorization Delays and Denials."
+          <div class="pub-venue">Software and Data Engineering, SEDE 2025, Communications in Computer and Information Science, Springer, 2025</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">02</div>
+        <div class="pub-text">Pai, R.R., Pendyala, J.P. "End-to-End Predictive Analytics Pipeline."
+          <div class="pub-venue">Proceedings of Data Analytics and Management: ICDAM 2025, Vol. 6, Springer, 2025</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">03</div>
+        <div class="pub-text">Pendyala, J.P., Jeswani, S. "ZT-ICAS: A Zero-Trust Integrity-Constrained Framework for Agentic Vulnerability Scanning."
+          <div class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 2026</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">04</div>
+        <div class="pub-text">Pendyala, J.P., Bobba, S., Abbas, A.A.H.S. "A Self-Adaptive Red Teaming Framework for Vulnerability Profiling with Dynamic Attack Graphs and Retrieval Augmented Generation."
+          <div class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 2026</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">05</div>
+        <div class="pub-text">Goyal, A., Pendyala, J.P., Bhat, R. "Towards an AI Framework for Scalable Compliance Monitoring in Regulated Sectors."
+          <div class="pub-venue">2025 IEEE International Conference on Compute, Control, Network &amp; Photonics, 2025</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">06</div>
+        <div class="pub-text">Pendyala, J.P., Sai, M.U., Chouhan, B. "Explainable Hybrid Intrusion Detection Integrating Machine Learning with Finetuned Large Language Models."
+          <div class="pub-venue">2026 13th International Conference on Computing for Sustainable Global Development (INDIACom), 2026</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">07</div>
+        <div class="pub-text">Rachakonda, V.N.K., Pendyala, J.P., Chatti, N., Marripelly, S.N., El-Sayed, A., et al. "Multinomial Classification Deep Learning Approach for Knee Osteoporosis."
+          <div class="pub-venue">2025 IEEE Conference on Artificial Intelligence (CAI), 2025</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">08</div>
+        <div class="pub-text">Pendyala, J.P., et al. "Multimodal Data Analytics: Advanced Fusion Architectures for Cross-Modal Sentiment Analysis and Customer Behavior Understanding." <strong>— Best Paper Award</strong>
+          <div class="pub-venue">International Conference on Data Science and AI for Social Good and Responsible Innovation (DASGRI-2026), Goldsmiths University of London, Springer, 2026</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="pub-num">09</div>
+        <div class="pub-text">Pendyala, J.P., Goyal, A. "From Prediction to Causation: Active Experiment Design for Robust Discovery."
+          <div class="pub-venue">Peer-reviewed conference proceedings, 2026</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);margin-top:12px;">
+      2 additional papers presented at conferences and currently in press.
+    </p>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:32px 0 14px;">Book Contributions</h3>
+    <div class="award-card">
+      <h3>Editor — RAG in Action</h3>
+      <div class="award-meta">Taylor &amp; Francis (forthcoming)</div>
+      <p style="margin:0;">Editor responsible for overseeing the compilation, technical review, and editorial direction of this practitioner-focused book on Retrieval-Augmented Generation systems, including proposal ownership, author selection, and review of 11 chapters.</p>
+    </div>
+    <div class="award-card">
+      <h3>Contributing Author — Book Chapters</h3>
+      <ul style="margin-top:10px;">
+        <li>"Building a Generative AI Application: A Case Study on an AI Travel Planner," in <em>Generative AI in Software Development</em>, pp. 289–323, 2026</li>
+        <li>Two forthcoming chapters, <em>Artificial Intelligence Agents in Industrial Orchestration</em>, Elsevier</li>
+        <li>Contributing author to additional books in the fields of AI, data engineering, and machine learning (details available on request)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="awards">
+    <p class="eyebrow">Recognition</p>
+    <h2>Awards &amp; Honors</h2>
+    <ul class="award-list">
+      <li><strong>Best Paper Award — DASGRI 2026</strong>, for "Multimodal Data Analytics: Advanced Fusion Architectures for Cross-Modal Sentiment Analysis and Customer Behavior Understanding," School of Computing, Goldsmiths, University of London, published by Springer (April 10–11, 2026). <a href="https://leedsjournal.co.uk/dasgri-2026/" target="_blank" rel="noopener">Conference media coverage</a></li>
+      <li><strong>Invited Panelist</strong>, Linux Foundation Open Source Summit + Embedded Linux Conference North America 2026, representing Infosys on production-ready AI agents</li>
+      <li><strong>Infosys InstaRise Award</strong> (special category), for exceptional performance, client engagement, and rapid implementation of proofs of concept</li>
+      <li><strong>Starshine Women Award</strong>, recognition through Infosys Women in Tech Series</li>
+      <li><strong>Tamil Nadu State-Level Government Engineering Competitive Examination</strong> — Rank #2 of approximately 200,000 candidates, leading to Assistant Engineer selection at TANGEDCO</li>
+    </ul>
+  </section>
+
+  <section id="leadership">
+    <p class="eyebrow">Community &amp; Service</p>
+    <h2>Professional Memberships &amp; Leadership</h2>
+
+    <div class="role-block">
+      <div class="role-org">IEEE — Senior Member</div>
+      <p class="role-desc" style="margin-top:2px;margin-bottom:8px;">The highest grade of membership attainable through application, requiring a minimum of 10 years of professional experience and demonstrated significant performance in IEEE fields of interest. Fewer than 10% of IEEE's 400,000+ members hold Senior Member grade.</p>
+      <div class="role-title">Vice Chair, IEEE Women in Engineering (WIE) Affinity Group, Region 1, Worcester County</div>
+      <div class="role-desc">Leads programming and professional development initiatives for women in engineering and technology.</div>
+    </div>
+
+    <div class="role-block">
+      <div class="role-org">ACM — Association for Computing Machinery</div>
+      <p class="role-desc" style="margin-top:2px;margin-bottom:8px;">The world's largest scientific and educational computing society, with over 100,000 members globally. Holds multiple elected and appointed leadership roles.</p>
+      <div class="role-title">Chair &amp; Chief Editor, ACM Dallas Chapter</div>
+      <div class="role-desc">Highest executive office in the chapter. Founded and edits the ACM Dallas Chapter Magazine, with final review authority over technical and professional submissions. Designs the chapter's innovation programming strategy, organizes technical workshops on AI, cloud computing, and software engineering, and runs mentoring sessions pairing early-career technologists with experienced practitioners.</div>
+      <div class="role-title" style="margin-top:10px;">Vice Chair, ACM Florida Chapter</div>
+      <div class="role-desc">Supports chapter leadership and programming across the Florida technology community.</div>
+      <div class="role-title" style="margin-top:10px;">Prior Roles — Director of Innovation &amp; Technology; Membership Chair, ACM Dallas Chapter</div>
+      <div class="role-desc">Led membership recruitment and retention initiatives contributing to chapter growth.</div>
+    </div>
+
+    <div class="role-block">
+      <div class="role-org">Women in Data Science (WiDS)</div>
+      <div class="role-title">Ambassador</div>
+      <div class="role-desc">Represents WiDS in the DFW community; promotes participation and visibility for women in data science and AI.</div>
+    </div>
+
+    <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:32px 0 14px;">Judging, Reviewing &amp; Editorial Service</h3>
+    <ul>
+      <li>Peer reviewer for 30+ scientific publications submitted to IEEE and Scopus-indexed journals and international conferences across AI, ML, data science, NLP, agentic AI, and computer vision</li>
+      <li>Primary editor of the forthcoming <em>RAG in Action</em> book — proposal ownership, author selection, review of 11 chapters, and manuscript submission to Taylor &amp; Francis</li>
+      <li>Quarterly architecture reviewer for enterprise Agentic AI platform features and services proposed by product owners across multiple teams</li>
+      <li>Daily code reviewer for a team of 7–8 senior data scientists on production platform work</li>
+      <li>Final-decision panelist for technical hiring interviews at Infosys for data science and AI engineering roles</li>
+      <li>Speaker proposal reviewer for Society of Women Engineers and ACM Dallas Chapter programming</li>
+    </ul>
+  </section>
+
+  <section id="speaking">
+    <p class="eyebrow">Public Engagement</p>
+    <h2>Speaking &amp; Media Presence</h2>
+
+    <div class="media-item">
+      <div class="label-sm">Conference Panel</div>
+      <h3>Open Source Summit + Embedded Linux Conference North America 2026</h3>
+      <p style="margin:4px 0 8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);">Linux Foundation · May 19, 2026</p>
+      <p>Invited panelist for "Building an Enterprise Platform for Production-Ready AI Agents." Represented Infosys alongside panelists from SAS, DeployHub, and Southwest Airlines — the panel brought together enterprise AI platform leaders to discuss production-grade agentic AI deployment at scale.</p>
+      <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">
+        <a href="https://osselcna2026.sched.com/event/2JRLl/panel-discussion-building-an-enterprise-platform-for-production-ready-ai-agents-jothsna-praveena-pendyala-infosys-ltd-brett-smith-sas-steve-taylor-deployhub-sundeep-bobba-southwest-airlines" target="_blank" rel="noopener">Panel listing</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.youtube.com/watch?v=y_3plQ9j0tk&list=PLbzoR-pLrL6p2URzlq8xlNtBhPspd2xpi&index=151" target="_blank" rel="noopener">Session recording</a>
+      </p>
+    </div>
+
+    <div class="media-item">
+      <div class="label-sm">Online Presence</div>
+      <p><strong>Instagram — @jothsna.aitales:</strong> AI education and practitioner content reaching a growing audience of engineers and data scientists</p>
+      <p><strong>Newsletter — The Agentic Stack:</strong> practitioner-focused publication covering production agentic AI, Kubernetes platform engineering, and LLM infrastructure</p>
+      <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">
+        <a href="https://leedsjournal.co.uk/dasgri-2026/" target="_blank" rel="noopener">DASGRI-2026 media coverage</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow">Capabilities</p>
+    <h2>Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-cat">
+        <div class="skill-cat-name">Agentic AI &amp; LLMs</div>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Multi-Agent Workflows</span>
+          <span class="tag">MCP Servers</span><span class="tag">Tool Integrations</span><span class="tag">RAG</span>
+          <span class="tag">Prompt Engineering</span><span class="tag">LLM Evaluation</span><span class="tag">Guardrails</span><span class="tag">LiteLLM</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Programming</div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST APIs</span>
+          <span class="tag">React / JS</span><span class="tag">JSON</span><span class="tag">Regex</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Platform &amp; Infrastructure</div>
+        <div class="tag-row">
+          <span class="tag">Kubernetes (AKS)</span><span class="tag">Microservices</span><span class="tag">Autoscaling (HPA/KEDA)</span>
+          <span class="tag">Docker</span><span class="tag">Azure DevOps</span><span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Cloud</div>
+        <div class="tag-row">
+          <span class="tag">Azure</span><span class="tag">AWS Bedrock</span><span class="tag">SageMaker</span>
+          <span class="tag">AWS Glue</span><span class="tag">Redshift</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Observability</div>
+        <div class="tag-row">
+          <span class="tag">LangSmith</span><span class="tag">Arize</span><span class="tag">OpenTelemetry</span>
+          <span class="tag">Logging</span><span class="tag">Model Monitoring</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Data &amp; ML</div>
+        <div class="tag-row">
+          <span class="tag">Machine Learning</span><span class="tag">NLP</span><span class="tag">Transformers</span>
+          <span class="tag">Feature Engineering</span><span class="tag">Model Deployment</span><span class="tag">ETL Pipelines</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-cat" style="grid-column:1/-1;">
+        <div class="skill-cat-name">Tools</div>
+        <div class="tag-row">
+          <span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span><span class="tag">Veracode</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div style="font-weight:600;color:#fff;font-size:15px;margin-bottom:6px;">Jothsna Praveena Pendyala</div>
+  <div>Dallas, TX &nbsp;·&nbsp; 774-519-9029 &nbsp;·&nbsp; <a href="mailto:jothsnapraveena1421@gmail.com">jothsnapraveena1421@gmail.com</a></div>
+  <div style="margin-top:8px;">
+    <a href="https://www.linkedin.com/in/jothsna/" target="_blank" rel="noopener">LinkedIn</a>
+    &nbsp;·&nbsp;
+    <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+  </div>
+  <div class="updated">Portfolio last updated July 2026</div>
+</footer>
+
+</body>
+</html>
