@@ -182,6 +182,23 @@
   /* media/speaking */
   .media-item{margin-bottom:18px;}
   .media-item .label-sm{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;}
+  .media-photo{
+    width:100%;max-width:420px;display:block;border:1px solid var(--hair);margin:12px 0;
+  }
+  .media-photo-cap{font-family:"Helvetica Neue",Arial,sans-serif;font-size:11.5px;color:var(--muted);margin-top:-8px;margin-bottom:12px;}
+
+  /* github contributions */
+  .gh-card{
+    display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--hair);border-left:3px solid var(--gold);
+    padding:18px 20px;flex-wrap:wrap;
+  }
+  .gh-card p{margin:0;flex:1;min-width:220px;}
+  .gh-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;background:var(--navy);
+    border:1px solid var(--navy);border-bottom:1px solid var(--navy);padding:9px 18px;white-space:nowrap;
+  }
+  .gh-btn:hover{background:var(--gold);border-color:var(--gold);color:#fff;}
+  .gh-chart{width:100%;margin-top:16px;border:1px solid var(--hair);}
 
   /* footer */
   footer{
@@ -210,6 +227,7 @@
       <a href="#awards">Awards</a>
       <a href="#leadership">Leadership</a>
       <a href="#speaking">Speaking</a>
+      <a href="#contributions">Contributions</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </div>
@@ -444,7 +462,7 @@
       </div>
     </div>
     <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);margin-top:12px;">
-      2 additional papers presented at conferences and currently in press.
+      
     </p>
 
     <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:32px 0 14px;">Book Contributions</h3>
@@ -458,8 +476,7 @@
       <ul style="margin-top:10px;">
         <li>"Building a Generative AI Application: A Case Study on an AI Travel Planner," in <em>Generative AI in Software Development</em>, pp. 289–323, 2026</li>
         <li>Two forthcoming chapters, <em>Artificial Intelligence Agents in Industrial Orchestration</em>, Elsevier</li>
-        <li>Contributing author to additional books in the fields of AI, data engineering, and machine learning (details available on request)</li>
-      </ul>
+        
     </div>
   </section>
 
@@ -471,7 +488,7 @@
       <li><strong>Invited Panelist</strong>, Linux Foundation Open Source Summit + Embedded Linux Conference North America 2026, representing Infosys on production-ready AI agents</li>
       <li><strong>Infosys InstaRise Award</strong> (special category), for exceptional performance, client engagement, and rapid implementation of proofs of concept</li>
       <li><strong>Starshine Women Award</strong>, recognition through Infosys Women in Tech Series</li>
-      <li><strong>Tamil Nadu State-Level Government Engineering Competitive Examination</strong> — Rank #2 of approximately 200,000 candidates, leading to Assistant Engineer selection at TANGEDCO</li>
+      
     </ul>
   </section>
 
@@ -519,10 +536,24 @@
     <h2>Speaking &amp; Media Presence</h2>
 
     <div class="media-item">
+      <div class="label-sm">Meetup Talk</div>
+      <h3>Scaling AI Workloads on K8s: Reliability Patterns for Prod. Agentic Platforms</h3>
+      <p style="margin:4px 0 8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);">Kubernetes and Cloud Native North Dallas · Improving, Plano, TX · July 16, 2026</p>
+      <p>Presented on production challenges in AI agent deployment, drawing on enterprise experience operating agentic platforms on Azure Kubernetes Service — designing for horizontal scalability across heterogeneous AI workloads and reliability patterns for cluster management.</p>
+      <img class="media-photo" src="images/kubernetes%20meetup.jpg" alt="Jothsna Praveena Pendyala presenting at the Kubernetes and Cloud Native North Dallas meetup, July 2026">
+      <p class="media-photo-cap">Presenting at Kubernetes and Cloud Native North Dallas, July 2026</p>
+      <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">
+        <a href="https://www.meetup.com/kubernetes-and-cloud-native-north-dallas/events/313200593/?slug=kubernetes-and-cloud-native-north-dallas&eventId=313200593" target="_blank" rel="noopener">Event listing</a>
+      </p>
+    </div>
+
+    <div class="media-item">
       <div class="label-sm">Conference Panel</div>
       <h3>Open Source Summit + Embedded Linux Conference North America 2026</h3>
       <p style="margin:4px 0 8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted);">Linux Foundation · May 19, 2026</p>
       <p>Invited panelist for "Building an Enterprise Platform for Production-Ready AI Agents." Represented Infosys alongside panelists from SAS, DeployHub, and Southwest Airlines — the panel brought together enterprise AI platform leaders to discuss production-grade agentic AI deployment at scale.</p>
+      <img class="media-photo" src="images/OSS.jpg" alt="Jothsna Praveena Pendyala on the panel discussion stage at Open Source Summit North America 2026">
+      <p class="media-photo-cap">Panel discussion, Open Source Summit North America 2026</p>
       <p style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;">
         <a href="https://osselcna2026.sched.com/event/2JRLl/panel-discussion-building-an-enterprise-platform-for-production-ready-ai-agents-jothsna-praveena-pendyala-infosys-ltd-brett-smith-sas-steve-taylor-deployhub-sundeep-bobba-southwest-airlines" target="_blank" rel="noopener">Panel listing</a>
         &nbsp;·&nbsp;
@@ -538,6 +569,16 @@
         <a href="https://leedsjournal.co.uk/dasgri-2026/" target="_blank" rel="noopener">DASGRI-2026 media coverage</a>
       </p>
     </div>
+  </section>
+
+  <section id="contributions">
+    <p class="eyebrow">Open Source</p>
+    <h2>GitHub Contributions</h2>
+    <div class="gh-card">
+      <p>Code, tooling, and open-source activity on GitHub — including MCP server integrations, agentic AI utilities, and data engineering projects.</p>
+      <a class="gh-btn" href="https://github.com/jothsnapraveena" target="_blank" rel="noopener">View GitHub Profile →</a>
+    </div>
+    <img class="gh-chart" src="https://ghchart.rshah.org/a9823a/jothsnapraveena" alt="Jothsna Praveena Pendyala's GitHub contributions graph">
   </section>
 
   <section id="skills">
