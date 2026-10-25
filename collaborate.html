@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact | Jothsna Praveena Pendyala</title>
 
-<link rel="stylesheet" href="profile.css?v=4">
+<link rel="stylesheet" href="profile.css?v=6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="profile.js" defer></script>
@@ -25,13 +25,25 @@
     <p class="sec-label">01 · Collaborate</p>
     <h2>Collaborate</h2>
     <p style="font-size:15px;">Speaking, research, or open source? Open to talk invitations, research collaboration, open-source contributions, and architecture conversations.</p>
-    <p style="font-size:15px;">Get in touch — choose a topic to start an email with the right subject line:</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;">
-      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Speaking%20invitation">🎤 Speaking invitation</a>
-      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Research%20collaboration">🔬 Research collaboration</a>
-      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Open-source%20contribution">💻 Open-source contribution</a>
-      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Architecture%20conversation">🏛️ Architecture conversation</a>
-    </div>
+    <form class="collaboration-form" id="collaboration-form" aria-describedby="form-help">
+      <div class="form-row">
+        <div><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required maxlength="100"></div>
+        <div><label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+      </div>
+      <label for="contact-topic">What would you like to discuss?</label>
+      <select id="contact-topic" name="topic" required>
+        <option value="">Select a topic</option>
+        <option>Speaking invitation</option><option>Research collaboration</option>
+        <option>Open-source contribution</option><option>Architecture conversation</option>
+        <option>Mentoring</option><option>Judging or organizing</option><option>Other</option>
+      </select>
+      <label for="contact-message">Your message</label>
+      <textarea id="contact-message" name="message" rows="6" required maxlength="2000" placeholder="Tell me about your idea, event, or project."></textarea>
+      <p id="form-help" class="form-help">This opens a draft in your email app. Review it and press Send there to email Jothsna.</p>
+      <div class="form-actions"><button class="btn btn-primary" type="submit">Open email draft &#8599;</button><button class="btn btn-ghost" id="copy-message" type="button">Copy message</button></div>
+      <p id="form-status" role="status" aria-live="polite"></p>
+      <noscript><p>To get in touch, email <a href="mailto:jothsnapraveena1421@gmail.com">jothsnapraveena1421@gmail.com</a>. Enable JavaScript to prepare a draft with this form.</p></noscript>
+    </form>
   </section>
 <section id="contact">
     <p class="eyebrow">Get in touch</p>
@@ -47,5 +59,6 @@
   <div class="foot-name">Jothsna Praveena Pendyala</div>
 </footer>
 
+<script src="contact.js" defer></script>
 </body>
 </html>
