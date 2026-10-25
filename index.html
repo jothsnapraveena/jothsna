@@ -187,6 +187,13 @@
     padding:5px 12px;border-radius:999px;
   }
   .tag:hover{background:var(--gold);}
+  details.more{margin-top:10px;}
+  details.more summary{
+    cursor:pointer;font-size:13px;font-weight:800;color:var(--violet);
+    font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;
+  }
+  details.more summary:hover{text-decoration:underline;}
+  details.more ul{margin-top:10px;}
   .skill-cat-name{
     font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;
     color:var(--violet);font-weight:700;margin-bottom:10px;text-transform:uppercase;
@@ -270,30 +277,16 @@
     <p class="sec-label">01 · Professional Summary</p>
     <h2>Building agentic AI <span class="hl">that survives production.</span></h2>
     <p class="lede">
-      Jothsna Praveena Pendyala is an AI Platform Architect and Senior Data Scientist at Infosys, serving as the
-      principal architect of an enterprise Agentic AI platform at AT&amp;T — one of the largest telecommunications
-      companies in the United States. She architects and owns a production-scale, multi-agent AI system deployed
-      across AT&amp;T's engineering organization, built on LangGraph, Azure Kubernetes Service, and a custom MCP
-      server infrastructure.
-    </p>
-    <p>
-      Her expertise spans agentic AI systems design, Kubernetes platform engineering, LLM infrastructure, and AI
-      observability at enterprise scale. She has prior experience on Amazon's AGI team, working directly on the
-      Nova family of large language models. She is a published researcher with peer-reviewed work in IEEE, Springer,
-      and other indexed venues, an editor of a forthcoming book published by Taylor &amp; Francis, and a contributing
-      author to four books in the field of AI and data engineering.
+      Jothsna Praveena Pendyala is an AI Platform Architect and Senior Data Scientist at Infosys, where she leads
+      an enterprise Agentic AI platform at AT&amp;T — production multi-agent systems on LangGraph, Azure Kubernetes
+      Service, and custom MCP servers. Previously on Amazon's AGI team, working on the Nova models. IEEE Senior
+      Member, Chair &amp; Chief Editor of ACM Dallas, and a published researcher in IEEE and Springer venues.
     </p>
     <p>
       She is the co-founder of <a href="https://deepagentlabs.io" target="_blank" rel="noopener">DeepAgentLabs</a>,
       a specification-first open-source ecosystem for AI operations, and of
       <a href="https://agenticedacademy.com" target="_blank" rel="noopener">AgenticEdAcademy</a>,
       an initiative for agentic AI education and skills.
-    </p>
-    <p>
-      She is an IEEE Senior Member, holds elected and appointed leadership roles at the Association for Computing
-      Machinery (ACM) — including Chair and Chief Editor of the ACM Dallas Chapter — and has been an invited
-      panelist at major international technology conferences including the Linux Foundation's Open Source Summit
-      North America 2026.
     </p>
     <div class="stat-row">
       <div class="stat"><div class="num">13+</div><div class="label">Years combined experience</div></div>
@@ -317,15 +310,17 @@
       <ul>
         <li>Architected and owns an enterprise Agentic AI Platform-as-a-Service (PaaS) enabling reusable multi-agent workflows across AT&amp;T's engineering organization</li>
         <li>Designed full end-to-end system architecture: LangGraph orchestration, MCP-based tool integration, microservices backend, and Azure Kubernetes Service (AKS) deployment</li>
+        <li>Established full observability stack using LangSmith, Arize, and OpenTelemetry for tracing, debugging, and performance monitoring of LLM-powered systems</li>
+        <li>Directs a team of 7–8 senior data scientists; conducts daily pull request reviews and quarterly architecture reviews</li>
+      </ul>
+      <details class="more"><summary>More about this role →</summary><ul>
         <li>Serves as product owner for the AI platform — defines requirements, prioritizes the roadmap, and drives adoption across multiple business teams</li>
         <li>Built and manages MCP (Model Context Protocol) servers enabling seamless integration of enterprise tools, APIs, and data sources within a unified agentic platform</li>
         <li>Developed scalable backend services using Python and FastAPI; deployed on AKS with Kubernetes autoscaling (HPA/KEDA), supporting high-concurrency, low-latency production workloads</li>
-        <li>Established full observability stack using LangSmith, Arize, and OpenTelemetry for tracing, debugging, and performance monitoring of LLM-powered systems</li>
         <li>Implemented LLM guardrails (LiteLLM) and Veracode SAST/SCA security scanning for compliant, secure AI deployment</li>
         <li>Manages CI/CD pipelines via Azure DevOps for automated deployments and consistent release management across environments</li>
-        <li>Directs a team of 7–8 senior data scientists; conducts daily pull request reviews and quarterly architecture reviews with authority to approve, request changes, or reject proposals</li>
         <li>Leads stakeholder collaboration across product, engineering, and business units; drives platform adoption across the enterprise</li>
-      </ul>
+      </ul></details>
       <div class="job-client">Client: SageSure Insurance</div>
       <ul>
         <li>Built intelligent agents on Infosys Agentic Foundry to automate complex data mapping and consolidation from disparate spreadsheet and PDF sources into structured formats</li>
@@ -340,11 +335,13 @@
       <div class="job-client">Amazon Nova · Artificial General Intelligence Team, Boston, MA</div>
       <ul>
         <li>Created and annotated over 25,000 high-quality multimodal training and evaluation examples (text, image, audio, video) for Amazon Nova large language models</li>
-        <li>Collaborated directly with Amazon scientists to design guardrail strategies — prompt rephrasing, output constraints, and filtering — contributing to a measurable 18% improvement in factual accuracy</li>
+        <li>Collaborated directly with Amazon scientists to design guardrail strategies — contributing to a measurable 18% improvement in factual accuracy</li>
+      </ul>
+      <details class="more"><summary>More about this role →</summary><ul>
         <li>Maintained a personal annotation accuracy score of 98%+ across all tasks</li>
         <li>Documented 50+ edge case resolution strategies to standardize handling of complex annotation scenarios</li>
         <li>Filed 30+ actionable UI/UX improvement tickets; 3 major platform updates were implemented as a result</li>
-      </ul>
+      </ul></details>
     </div>
 
     <div class="card">
@@ -356,9 +353,11 @@
       <ul>
         <li>Designed and deployed a conversational AI agent using GPT-4o and foundation models including Claude, Mistral, and LLaMA</li>
         <li>Engineered Retrieval-Augmented Generation (RAG) pipelines for customer tariff data retrieval; achieved 95% accuracy improvement in billing assessments</li>
+      </ul>
+      <details class="more"><summary>More about this role →</summary><ul>
         <li>Fine-tuned GPT-4o on utility data and FAQs; delivered 20% improvement in response accuracy across 3,000+ interactions</li>
         <li>Built ETL pipelines using AWS Glue and Redshift for model retraining; reduced manual preprocessing time by 25%</li>
-      </ul>
+      </ul></details>
     </div>
 
     <div class="card">
@@ -370,8 +369,10 @@
       <ul>
         <li>Developed and deployed ML models (XGBoost, Random Forest) for short-term energy demand forecasting; achieved 89% accuracy across 100,000+ records</li>
         <li>Monitored and maintained electrical infrastructure across 200+ transformers and 4 substations using IoT-based predictive maintenance</li>
-        <li>Designed regulatory compliance reporting workflows ensuring 100% adherence to government-mandated operational performance standards</li>
       </ul>
+      <details class="more"><summary>More about this role →</summary><ul>
+        <li>Designed regulatory compliance reporting workflows ensuring 100% adherence to government-mandated operational performance standards</li>
+      </ul></details>
     </div>
 
     <div class="card">
@@ -418,75 +419,25 @@
     <p style="font-size:13px;opacity:.75;">
       Full list with citations: <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a>
     </p>
-    <div class="card">
-      <div class="pub">
-        <div class="pub-num">01</div>
-        <div class="pub-text">Pai, R.R., Pendyala, J.P. "Optimizing Healthcare Pipelines for Patient Benefit: A Data Engineering Perspective on Preauthorization Delays and Denials."
-          <div class="pub-venue">Software and Data Engineering, SEDE 2025, Communications in Computer and Information Science, Springer, 2025</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">02</div>
-        <div class="pub-text">Pai, R.R., Pendyala, J.P. "End-to-End Predictive Analytics Pipeline."
-          <div class="pub-venue">Proceedings of Data Analytics and Management: ICDAM 2025, Vol. 6, Springer, 2025</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">03</div>
-        <div class="pub-text">Pendyala, J.P., Jeswani, S. "ZT-ICAS: A Zero-Trust Integrity-Constrained Framework for Agentic Vulnerability Scanning."
-          <div class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 2026</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">04</div>
-        <div class="pub-text">Pendyala, J.P., Bobba, S., Abbas, A.A.H.S. "A Self-Adaptive Red Teaming Framework for Vulnerability Profiling with Dynamic Attack Graphs and Retrieval Augmented Generation."
-          <div class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC), 2026</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">05</div>
-        <div class="pub-text">Goyal, A., Pendyala, J.P., Bhat, R. "Towards an AI Framework for Scalable Compliance Monitoring in Regulated Sectors."
-          <div class="pub-venue">2025 IEEE International Conference on Compute, Control, Network &amp; Photonics, 2025</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">06</div>
-        <div class="pub-text">Pendyala, J.P., Sai, M.U., Chouhan, B. "Explainable Hybrid Intrusion Detection Integrating Machine Learning with Finetuned Large Language Models."
-          <div class="pub-venue">2026 13th International Conference on Computing for Sustainable Global Development (INDIACom), 2026</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">07</div>
-        <div class="pub-text">Rachakonda, V.N.K., Pendyala, J.P., Chatti, N., Marripelly, S.N., El-Sayed, A., et al. "Multinomial Classification Deep Learning Approach for Knee Osteoporosis."
-          <div class="pub-venue">2025 IEEE Conference on Artificial Intelligence (CAI), 2025</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">08</div>
-        <div class="pub-text">Pendyala, J.P., et al. "Multimodal Data Analytics: Advanced Fusion Architectures for Cross-Modal Sentiment Analysis and Customer Behavior Understanding." <strong>— Best Paper Award</strong>
-          <div class="pub-venue">International Conference on Data Science and AI for Social Good and Responsible Innovation (DASGRI-2026), Goldsmiths University of London, Springer, 2026</div>
-        </div>
-      </div>
-      <div class="pub">
-        <div class="pub-num">09</div>
-        <div class="pub-text">Pendyala, J.P., Goyal, A. "From Prediction to Causation: Active Experiment Design for Robust Discovery."
-          <div class="pub-venue">Peer-reviewed conference proceedings, 2026</div>
-        </div>
-      </div>
+    <div class="card" style="font-size:14px;line-height:1.7;">
+      <p><strong>Featured.</strong> Multimodal Data Analytics: Advanced Fusion Architectures — DASGRI-2026, Springer <strong>— Best Paper Award</strong></p>
+      <p>ZT-ICAS: A Zero-Trust Integrity-Constrained Framework for Agentic Vulnerability Scanning — IEEE ICAIC 2026</p>
+      <p style="margin:0;">A Self-Adaptive Red Teaming Framework for Vulnerability Profiling — IEEE ICAIC 2026</p>
+      <details class="more"><summary>All 9 publications →</summary>
+      <p>Optimizing Healthcare Pipelines for Patient Benefit — SEDE 2025, Springer</p>
+      <p>End-to-End Predictive Analytics Pipeline — ICDAM 2025, Springer</p>
+      <p>Towards an AI Framework for Scalable Compliance Monitoring in Regulated Sectors — IEEE CCNP 2025</p>
+      <p>Explainable Hybrid Intrusion Detection Integrating ML with Finetuned LLMs — INDIACom 2026</p>
+      <p>Multinomial Classification Deep Learning Approach for Knee Osteoporosis — IEEE CAI 2025</p>
+      <p style="margin:0;">From Prediction to Causation: Active Experiment Design for Robust Discovery — 2026</p>
+      <p style="margin:0;">Full list with citations: <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile →</a></p>
+      </details>
     </div>
 
     <h3 style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--violet);letter-spacing:.12em;margin:32px 0 14px;text-transform:uppercase;">Book Contributions</h3>
     <div class="card">
-      <h3>Editor — RAG in Action</h3>
-      <p style="font-size:13px;opacity:.7;margin-bottom:10px;">Taylor &amp; Francis (forthcoming)</p>
-      <p style="margin:0;">Editor responsible for overseeing the compilation, technical review, and editorial direction of this practitioner-focused book on Retrieval-Augmented Generation systems, including proposal ownership, author selection, and review of 11 chapters.</p>
-    </div>
-    <div class="card">
-      <h3>Contributing Author — Book Chapters</h3>
-      <ul style="margin-top:10px;">
-        <li>"Building a Generative AI Application: A Case Study on an AI Travel Planner," in <em>Generative AI in Software Development</em>, pp. 289–323, 2026</li>
-        <li>Two forthcoming chapters, <em>Artificial Intelligence Agents in Industrial Orchestration</em>, Elsevier</li>
-      </ul>
+      <p style="margin:0 0 8px;"><strong>Editor — RAG in Action</strong> (Taylor &amp; Francis, forthcoming) — proposal ownership, author selection, review of 11 chapters.</p>
+      <p style="margin:0;"><strong>Contributing author</strong> — "Building a Generative AI Application: A Case Study on an AI Travel Planner," <em>Generative AI in Software Development</em>, pp. 289–323, 2026; plus two forthcoming chapters in <em>Artificial Intelligence Agents in Industrial Orchestration</em>, Elsevier.</p>
     </div>
   </section>
 
@@ -509,20 +460,15 @@
 
     <div class="card">
       <h3>IEEE — Senior Member</h3>
-      <p style="font-size:14px;opacity:.75;">The highest grade of membership attainable through application, requiring a minimum of 10 years of professional experience and demonstrated significant performance in IEEE fields of interest. Fewer than 10% of IEEE's 400,000+ members hold Senior Member grade.</p>
-      <p style="margin-bottom:4px;"><strong>Vice Chair, IEEE Women in Engineering (WIE) Affinity Group, Region 1, Worcester County</strong></p>
-      <p style="font-size:14px;opacity:.75;">Leads programming and professional development initiatives for women in engineering and technology.</p>
+      <p style="font-size:14px;opacity:.75;margin:0 0 8px;">Highest grade attainable through application; fewer than 10% of IEEE's 400,000+ members hold it.</p>
+      <p style="margin:0;"><strong>Vice Chair, IEEE Women in Engineering (WIE) Affinity Group, Region 1, Worcester County</strong></p>
     </div>
 
     <div class="card">
       <h3>ACM — Association for Computing Machinery</h3>
-      <p style="font-size:14px;opacity:.75;">The world's largest scientific and educational computing society, with over 100,000 members globally. Holds multiple elected and appointed leadership roles.</p>
-      <p style="margin-bottom:4px;"><strong>Chair &amp; Chief Editor, ACM Dallas Chapter</strong></p>
-      <p style="font-size:14px;opacity:.75;">Highest executive office in the chapter. Founded and edits the ACM Dallas Chapter Magazine, with final review authority over technical and professional submissions. Designs the chapter's innovation programming strategy, organizes technical workshops on AI, cloud computing, and software engineering, and runs mentoring sessions pairing early-career technologists with experienced practitioners.</p>
-      <p style="margin-bottom:4px;"><strong>Vice Chair, ACM Florida Chapter</strong></p>
-      <p style="font-size:14px;opacity:.75;">Supports chapter leadership and programming across the Florida technology community.</p>
-      <p style="margin-bottom:4px;"><strong>Prior Roles — Director of Innovation &amp; Technology; Membership Chair, ACM Dallas Chapter</strong></p>
-      <p style="font-size:14px;opacity:.75;">Led membership recruitment and retention initiatives contributing to chapter growth.</p>
+      <p style="margin-bottom:4px;"><strong>Chair &amp; Chief Editor, ACM Dallas Chapter</strong> — founded and edits the chapter magazine; designs innovation programming; runs mentoring sessions.</p>
+      <p style="margin-bottom:4px;"><strong>Vice Chair, ACM Florida Chapter.</strong></p>
+      <p style="margin:0;"><strong>Previously:</strong> Director of Innovation &amp; Technology; Membership Chair, ACM Dallas.</p>
     </div>
 
     <div class="card">
@@ -533,12 +479,9 @@
     <h3 style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--violet);letter-spacing:.12em;margin:32px 0 14px;text-transform:uppercase;">Judging, Reviewing &amp; Editorial Service</h3>
     <div class="card">
       <ul>
-        <li>Peer reviewer for 30+ scientific publications submitted to IEEE and Scopus-indexed journals and international conferences across AI, ML, data science, NLP, agentic AI, and computer vision</li>
-        <li>Primary editor of the forthcoming <em>RAG in Action</em> book — proposal ownership, author selection, review of 11 chapters, and manuscript submission to Taylor &amp; Francis</li>
-        <li>Quarterly architecture reviewer for enterprise Agentic AI platform features and services proposed by product owners across multiple teams</li>
-        <li>Daily code reviewer for a team of 7–8 senior data scientists on production platform work</li>
-        <li>Final-decision panelist for technical hiring interviews at Infosys for data science and AI engineering roles</li>
-        <li>Speaker proposal reviewer for Society of Women Engineers and ACM Dallas Chapter programming</li>
+        <li>Peer reviewer for 30+ publications across IEEE and Scopus-indexed journals and conferences</li>
+        <li>Primary editor, <em>RAG in Action</em> (Taylor &amp; Francis) — proposal, author selection, 11 chapters</li>
+        <li>Architecture and code reviewer; final-decision panelist for Infosys data science and AI hiring; speaker-proposal reviewer for SWE and ACM Dallas</li>
       </ul>
     </div>
   </section>
@@ -571,7 +514,7 @@
       <div class="label-sm">Meetup Talk</div>
       <h3>Evals: One Does Not Simply Ship an Agent</h3>
       <p style="font-size:13px;opacity:.7;">Plano Prompt Engineers · Improving, Plano, TX · July 22, 2026</p>
-      <p>Hands-on workshop on evaluation frameworks for AI agents — building a working eval system around a Claude-powered shopping assistant, covering task definitions, deterministic and LLM-as-judge grader types, and iterative performance improvement strategies.</p>
+      <p>Hands-on workshop on eval frameworks for AI agents — task definitions, deterministic and LLM-as-judge graders, and iterative improvement, built around a Claude-powered shopping assistant.</p>
       <img class="media-photo" src="images/prompt%20engineers.jpg" alt="Jothsna Praveena Pendyala presenting at the Plano Prompt Engineers meetup, July 2026">
       <p class="media-photo-cap">Presenting at Plano Prompt Engineers, July 2026</p>
       <p style="font-size:13px;"><a href="https://www.meetup.com/plano-prompt-engineers/events/315507513/?eventOrigin=group_past_events" target="_blank" rel="noopener">Event listing →</a></p>
@@ -581,7 +524,7 @@
       <div class="label-sm">Meetup Talk</div>
       <h3>Scaling AI Workloads on K8s: Reliability Patterns for Prod. Agentic Platforms</h3>
       <p style="font-size:13px;opacity:.7;">Kubernetes and Cloud Native North Dallas · Improving, Plano, TX · July 16, 2026</p>
-      <p>Presented on production challenges in AI agent deployment, drawing on enterprise experience operating agentic platforms on Azure Kubernetes Service — designing for horizontal scalability across heterogeneous AI workloads and reliability patterns for cluster management.</p>
+      <p>Production challenges in AI agent deployment on Azure Kubernetes Service — horizontal scalability across heterogeneous AI workloads and reliability patterns for cluster management.</p>
       <img class="media-photo" src="images/kubernetes%20meetup.jpg" alt="Jothsna Praveena Pendyala presenting at the Kubernetes and Cloud Native North Dallas meetup, July 2026">
       <p class="media-photo-cap">Presenting at Kubernetes and Cloud Native North Dallas, July 2026</p>
       <p style="font-size:13px;"><a href="https://www.meetup.com/kubernetes-and-cloud-native-north-dallas/events/313200593/?slug=kubernetes-and-cloud-native-north-dallas&eventId=313200593" target="_blank" rel="noopener">Event listing →</a></p>
@@ -591,7 +534,7 @@
       <div class="label-sm">Conference Panel</div>
       <h3>Open Source Summit + Embedded Linux Conference North America 2026</h3>
       <p style="font-size:13px;opacity:.7;">Linux Foundation · May 19, 2026</p>
-      <p>Invited panelist for "Building an Enterprise Platform for Production-Ready AI Agents." Represented Infosys alongside panelists from SAS, DeployHub, and Southwest Airlines — the panel brought together enterprise AI platform leaders to discuss production-grade agentic AI deployment at scale.</p>
+      <p>Invited panelist for "Building an Enterprise Platform for Production-Ready AI Agents," alongside panelists from SAS, DeployHub, and Southwest Airlines.</p>
       <img class="media-photo" src="images/OSS.jpg" alt="Jothsna Praveena Pendyala on the panel discussion stage at Open Source Summit North America 2026">
       <p class="media-photo-cap">Panel discussion, Open Source Summit North America 2026</p>
       <p style="font-size:13px;">
