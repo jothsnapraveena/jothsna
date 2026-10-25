@@ -194,6 +194,13 @@
   }
   details.more summary:hover{text-decoration:underline;}
   details.more ul{margin-top:10px;}
+  .core-skill{
+    background:#fff;border:3px solid;border-radius:20px;padding:22px 24px;
+    font-size:17px;line-height:1.35;
+  }
+  .core-skill span{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#475569;
+  }
   .skill-cat-name{
     font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;
     color:var(--violet);font-weight:700;margin-bottom:10px;text-transform:uppercase;
@@ -227,7 +234,8 @@
       <a href="#summary">About</a>
       <a href="#contributions">Open Source</a>
       <a href="#leadership">Community</a>
-      <a href="#contact">Contact</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#collaborate">Collaborate</a>
     </div>
   </div>
 </nav>
@@ -259,7 +267,7 @@
         <div class="sticker sticker-teal">SPEAKER 🎤</div>
       </div>
       </div>
-      <p class="avatar-hint">👆 <b>move your cursor</b> — she leans toward you. Click her, she talks.</p>
+      <p class="avatar-hint">👆 Click her, she talks.</p>
     </div>
   </div>
 </header>
@@ -294,18 +302,56 @@
     <h2>Technical <span class="hl">skills</span></h2>
     <h3 style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;letter-spacing:.08em;margin:26px 0 12px;">CORE SKILLS</h3>
     <div class="grid">
-      <div class="card" style="padding:18px 20px;"><strong>Agentic AI</strong><br><span style="font-size:13px;opacity:.7;">Agents, workflows &amp; evals</span></div>
-      <div class="card" style="padding:18px 20px;"><strong>LLM Infrastructure</strong><br><span style="font-size:13px;opacity:.7;">Inference, RAG &amp; optimization</span></div>
-      <div class="card" style="padding:18px 20px;"><strong>Kubernetes</strong><br><span style="font-size:13px;opacity:.7;">Platform engineering</span></div>
-      <div class="card" style="padding:18px 20px;"><strong>Observability</strong><br><span style="font-size:13px;opacity:.7;">Tracing, evals &amp; telemetry</span></div>
-      <div class="card" style="padding:18px 20px;"><strong>Cloud Architecture</strong><br><span style="font-size:13px;opacity:.7;">Azure, AWS &amp; GCP</span></div>
-      <div class="card" style="padding:18px 20px;"><strong>Open Source</strong><br><span style="font-size:13px;opacity:.7;">Building in the open</span></div>
+      <div class="core-skill" style="border-color:#2563eb;box-shadow:0 0 24px rgba(37,99,235,.22);"><strong>Agentic AI</strong><br><span>Agents, workflows &amp; evals</span></div>
+      <div class="core-skill" style="border-color:#0891b2;box-shadow:0 0 24px rgba(8,145,178,.22);"><strong>LLM Infrastructure</strong><br><span>Inference, RAG &amp; optimization</span></div>
+      <div class="core-skill" style="border-color:#7c3aed;box-shadow:0 0 24px rgba(124,58,237,.22);"><strong>Cloud Architecture</strong><br><span>Azure, AWS &amp; GCP</span></div>
+      <div class="core-skill" style="border-color:#65a30d;box-shadow:0 0 24px rgba(101,163,13,.22);"><strong>Kubernetes</strong><br><span>Platform engineering</span></div>
+      <div class="core-skill" style="border-color:#db2777;box-shadow:0 0 24px rgba(219,39,119,.22);"><strong>Observability</strong><br><span>Tracing, evals &amp; telemetry</span></div>
+      <div class="core-skill" style="border-color:#059669;box-shadow:0 0 24px rgba(5,150,105,.22);"><strong>Open Source</strong><br><span>Building in the open</span></div>
     </div>
     <h3 style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;letter-spacing:.08em;margin:26px 0 12px;">TECHNOLOGIES</h3>
     <div class="tag-row"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">MCP Servers</span><span class="tag">FastAPI</span><span class="tag">Azure Kubernetes Service</span><span class="tag">Docker</span><span class="tag">Terraform</span><span class="tag">CI/CD</span><span class="tag">OpenTelemetry</span><span class="tag">LangSmith</span><span class="tag">Arize</span><span class="tag">LiteLLM</span><span class="tag">RAG</span><span class="tag">Guardrails</span><span class="tag">SQL</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Databricks</span><span class="tag">Power BI</span><span class="tag">Git</span><span class="tag">Azure DevOps</span></div>
+    <h3 style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;letter-spacing:.08em;margin:26px 0 12px;">FOCUS AREAS</h3>
+    <div class="tag-row"><span class="tag">AI Governance</span><span class="tag">Agent Evaluation</span><span class="tag">AI Reliability</span><span class="tag">Open-Source Leadership</span><span class="tag">Community Building</span><span class="tag">Agentic AI Education</span></div>
+  </section>
+<section id="explore">
+    <p class="sec-label">03 · Explore Work</p>
+    <h2>Explore my <span class="hl">work</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>DeepAgentLabs</h3>
+        <p>Specification-first open-source ecosystem for AI operations.</p>
+        <p style="font-size:13px;"><a href="https://deepagentlabs.io" target="_blank" rel="noopener">Explore →</a></p>
+      </div>
+      <div class="card">
+        <h3>AgenticEdAcademy</h3>
+        <p>Academy for agentic AI education and skills.</p>
+        <p style="font-size:13px;"><a href="https://agenticedacademy.com" target="_blank" rel="noopener">Explore →</a></p>
+      </div>
+      <div class="card">
+        <h3>Microsoft Foundry Labs</h3>
+        <p>Hands-on Microsoft Foundry labs and guides on GitHub.</p>
+        <p style="font-size:13px;"><a href="https://github.com/jothsnapraveena/Microsoft-Foundry-labs-handson" target="_blank" rel="noopener">Explore →</a></p>
+      </div>
+      <div class="card">
+        <h3>AI Tales</h3>
+        <p>Daily technically-deep AI carousels and reels.</p>
+        <p style="font-size:13px;"><a href="https://www.instagram.com/jothsna.aitales/" target="_blank" rel="noopener">Explore →</a></p>
+      </div>
+      <div class="card">
+        <h3>Talks</h3>
+        <p>Conference and meetup talks, including SREday Dallas Q4.</p>
+        <p style="font-size:13px;"><a href="#speaking">Explore →</a></p>
+      </div>
+      <div class="card">
+        <h3>Research</h3>
+        <p>Peer-reviewed publications in IEEE, Springer, and more.</p>
+        <p style="font-size:13px;"><a href="#research">Explore →</a></p>
+      </div>
+    </div>
   </section>
 <section id="contributions">
-    <p class="sec-label">03 · Open Source</p>
+    <p class="sec-label">04 · Open Source</p>
     <h2>Open <span class="hl">source</span></h2>
     <div class="grid">
       <div class="card">
@@ -328,7 +374,7 @@
     </div>
   </section>
 <section id="experience">
-    <p class="sec-label">04 · Professional Experience</p>
+    <p class="sec-label">05 · Professional Experience</p>
     <h2>Professional <span class="hl">experience</span></h2>
 
     <div class="card">
@@ -407,7 +453,7 @@
     </div>
   </section>
 <section id="education">
-    <p class="sec-label">05 · Education</p>
+    <p class="sec-label">06 · Education</p>
     <h2><span class="hl">Education</span></h2>
     <div class="card">
         <div style="margin-bottom:16px;">
@@ -421,15 +467,27 @@
       </div>
   </section>
 <section id="research">
-    <p class="sec-label">06 · Research & Publications</p>
+    <p class="sec-label">07 · Research & Publications</p>
     <h2>Research <span class="hl">publications</span></h2>
     <p style="font-size:13px;opacity:.75;">
       Full list with citations: <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a>
     </p>
-    <div class="card" style="font-size:14px;line-height:1.7;">
-      <p><strong>Featured.</strong> Multimodal Data Analytics: Advanced Fusion Architectures — DASGRI-2026, Springer <strong>— Best Paper Award</strong></p>
-      <p>ZT-ICAS: A Zero-Trust Integrity-Constrained Framework for Agentic Vulnerability Scanning — IEEE ICAIC 2026</p>
-      <p style="margin:0;">A Self-Adaptive Red Teaming Framework for Vulnerability Profiling — IEEE ICAIC 2026</p>
+    <div class="grid">
+      <div class="card">
+        <div class="label-sm" style="color:#b45309;">★ Best Paper Award</div>
+        <h3>Multimodal Data Analytics: Advanced Fusion Architectures</h3>
+        <p style="font-size:13px;opacity:.7;margin:0;">DASGRI-2026, Springer</p>
+      </div>
+      <div class="card">
+        <h3>ZT-ICAS: A Zero-Trust Integrity-Constrained Framework for Agentic Vulnerability Scanning</h3>
+        <p style="font-size:13px;opacity:.7;margin:0;">IEEE ICAIC 2026</p>
+      </div>
+      <div class="card">
+        <h3>A Self-Adaptive Red Teaming Framework for Vulnerability Profiling</h3>
+        <p style="font-size:13px;opacity:.7;margin:0;">IEEE ICAIC 2026</p>
+      </div>
+    </div>
+    <div class="card" style="font-size:14px;line-height:1.7;margin-top:18px;">
       <details class="more"><summary>All 9 publications →</summary>
       <p>Optimizing Healthcare Pipelines for Patient Benefit — SEDE 2025, Springer</p>
       <p>End-to-End Predictive Analytics Pipeline — ICDAM 2025, Springer</p>
@@ -448,7 +506,7 @@
     </div>
   </section>
 <section id="leadership">
-    <p class="sec-label">07 · Community & Leadership</p>
+    <p class="sec-label">08 · Community & Leadership</p>
     <h2>Leadership &amp; <span class="hl">memberships</span></h2>
 
     <div class="card">
@@ -479,7 +537,7 @@
     </div>
   </section>
 <section id="speaking">
-    <p class="sec-label">08 · Speaking</p>
+    <p class="sec-label">09 · Speaking</p>
     <h2>Speaking &amp; <span class="hl">media</span></h2>
 
     <div class="card">
@@ -544,7 +602,7 @@
     </div>
   </section>
 <section id="awards">
-    <p class="sec-label">09 · Awards & Recognition</p>
+    <p class="sec-label">10 · Awards & Recognition</p>
     <h2>Awards &amp; <span class="hl">honors</span></h2>
     <div class="card">
       <ul style="list-style:none;padding:0;margin:0;">
@@ -555,11 +613,8 @@
       </ul>
     </div>
   </section>
-
-</main>
-
-  <section id="certifications">
-    <p class="sec-label">10 · Certifications</p>
+<section id="certifications">
+    <p class="sec-label">11 · Certifications</p>
     <h2>Certified <span class="hl">badges</span></h2>
     <div class="grid">
       <div class="card">
@@ -588,18 +643,21 @@
       </div>
     </div>
   </section>
+<section id="collaborate">
+    <p class="sec-label">12 · Collaborate</p>
+    <h2>Collaborate</h2>
+    <p style="font-size:15px;">Speaking, research, or open source? Open to talk invitations, research collaboration, open-source contributions, and architecture conversations.</p>
+    <p style="font-size:15px;">Get in touch — choose a topic to start an email with the right subject line:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:18px 0;">
+      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Speaking%20invitation">🎤 Speaking invitation</a>
+      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Research%20collaboration">🔬 Research collaboration</a>
+      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Open-source%20contribution">💻 Open-source contribution</a>
+      <a class="btn" href="mailto:jothsnapraveena1421@gmail.com?subject=Architecture%20conversation">🏛️ Architecture conversation</a>
+    </div>
+  </section>
 
-<footer id="contact">
+<footer>
   <div class="foot-name">Jothsna Praveena Pendyala</div>
-  <div>Dallas, TX &nbsp;·&nbsp; 774-519-9029 &nbsp;·&nbsp; <a href="mailto:jothsnapraveena1421@gmail.com">jothsnapraveena1421@gmail.com</a></div>
-  <div style="margin-top:10px;">
-    <a href="https://www.linkedin.com/in/jothsna/" target="_blank" rel="noopener">LinkedIn</a>
-    &nbsp;·&nbsp;
-    <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-    &nbsp;·&nbsp;
-    <a href="https://github.com/jothsnapraveena" target="_blank" rel="noopener">GitHub</a>
-  </div>
-  <div class="updated">Portfolio redesigned October 2026 — move your cursor and the avatar leans toward you. 👀</div>
 </footer>
 
 <script>
