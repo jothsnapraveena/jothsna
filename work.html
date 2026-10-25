@@ -226,6 +226,12 @@
     .marquee-track{animation:none;}
     *{transition:none !important;}
   }
+  .badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .badge-item{background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:20px 16px;text-align:center;box-shadow:5px 5px 0 var(--ink);}
+  .badge-item img{width:100%;max-width:210px;height:auto;border-radius:12px;display:block;margin:0 auto 12px;}
+  .badge-item strong{display:block;font-size:15px;line-height:1.3;}
+  .badge-item span{font-size:13px;opacity:.7;}
+  @media (max-width:680px){.badge-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -329,30 +335,36 @@
 <section id="certifications">
     <p class="sec-label">04 · Certifications</p>
     <h2>Certified <span class="hl">badges</span></h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Claude Certified Architect Foundation</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">Anthropic</p>
+    <div class="badge-grid">
+      <div class="badge-item">
+        <img src="images/cert-github-foundations.jpg" alt="GitHub Foundations certification badge">
+        <strong>GitHub Foundations</strong>
+        <span>GitHub</span>
       </div>
-      <div class="card">
-        <h3>Claude Certified Architect Professional</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">Anthropic</p>
+      <div class="badge-item">
+        <img src="images/cert-claude-professional.jpg" alt="Claude Certified Architect Professional badge">
+        <strong>Claude Certified Architect Professional</strong>
+        <span>Anthropic</span>
       </div>
-      <div class="card">
-        <h3>GitHub Copilot Certified</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">GitHub</p>
+      <div class="badge-item">
+        <img src="images/cert-claude-foundations.jpg" alt="Claude Certified Architect Foundations badge">
+        <strong>Claude Certified Architect Foundations</strong>
+        <span>Anthropic</span>
       </div>
-      <div class="card">
-        <h3>AWS Cloud Practitioner</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">Amazon Web Services</p>
+      <div class="badge-item">
+        <img src="images/cert-aws-cloud-practitioner.jpg" alt="AWS Certified Cloud Practitioner badge">
+        <strong>AWS Certified Cloud Practitioner</strong>
+        <span>Amazon Web Services</span>
       </div>
-      <div class="card">
-        <h3>AWS AI Practitioner</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">Amazon Web Services</p>
+      <div class="badge-item">
+        <img src="images/cert-aws-ai-practitioner.jpg" alt="AWS Certified AI Practitioner badge">
+        <strong>AWS Certified AI Practitioner</strong>
+        <span>Amazon Web Services</span>
       </div>
-      <div class="card">
-        <h3>AWS Machine Learning Associate</h3>
-        <p style="font-size:13px;opacity:.7;margin:0;">Amazon Web Services</p>
+      <div class="badge-item">
+        <img src="images/cert-aws-ml-engineer-associate.jpg" alt="AWS Certified Machine Learning Engineer Associate badge">
+        <strong>AWS Certified Machine Learning Engineer &ndash; Associate</strong>
+        <span>Amazon Web Services</span>
       </div>
     </div>
   </section>
