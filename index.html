@@ -201,6 +201,11 @@
   .core-skill span{
     font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#475569;
   }
+  .hero-mini-card{
+    background:#fff;border:3px solid var(--ink);border-radius:16px;
+    padding:14px 16px;box-shadow:4px 4px 0 var(--ink);margin-top:14px;text-align:left;
+  }
+  .hero-mini-card p{margin:8px 0 0;font-size:14px;line-height:1.5;}
   .skill-cat-name{
     font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;
     color:var(--violet);font-weight:700;margin-bottom:10px;text-transform:uppercase;
@@ -268,6 +273,16 @@
       </div>
       </div>
       <p class="avatar-hint">👆 Click her, she talks.</p>
+      <div class="hero-mini-card">
+        <div class="label-sm">Open Source</div>
+        <p><a href="https://deepagentlabs.io" target="_blank" rel="noopener">DeepAgentLabs</a> · <a href="https://github.com/jothsnapraveena/Microsoft-Foundry-labs-handson" target="_blank" rel="noopener">Foundry Labs</a></p>
+        <p style="font-size:13px;"><a href="#contributions">All open source →</a></p>
+      </div>
+      <div class="hero-mini-card">
+        <div class="label-sm">Core Skills</div>
+        <p>Agentic AI · LLM Infrastructure · Kubernetes · Observability</p>
+        <p style="font-size:13px;"><a href="#skills">All skills →</a></p>
+      </div>
     </div>
   </div>
 </header>
@@ -351,23 +366,29 @@
     </div>
   </section>
 <section id="contributions">
-    <p class="sec-label">04 · Open Source</p>
-    <h2>Open <span class="hl">source</span></h2>
+    <p class="sec-label">04 · Featured Open Source Projects</p>
+    <h2>Tools for running AI agents <span class="hl">in production</span></h2>
+    <p style="font-size:15px;">Framework-neutral, open-source tooling that puts reliability, observability and governance into practice.</p>
+    <p style="font-size:13px;"><a href="https://github.com/jothsnapraveena" target="_blank" rel="noopener">All projects →</a></p>
     <div class="grid">
       <div class="card">
-        <div class="label-sm" style="color:#b45309;">★ Featured</div>
         <h3>DeepAgentLabs</h3>
-        <p>Co-founder of a specification-first open-source ecosystem for AI operations — tooling to observe, evaluate, stress-test, and operate production agentic workflows, including AgenticLens, agentic-evals, agentic-chaos, and a control-tower console.</p>
-        <p style="font-size:13px;"><a href="https://deepagentlabs.io" target="_blank" rel="noopener">deepagentlabs.io →</a></p>
+        <div class="label-sm">AgenticOps</div>
+        <p class="label-sm" style="margin-top:8px;">Co-founder</p>
+        <p>Observe, evaluate, stress-test, supervise and operate production agentic AI workflows.</p>
+        <div class="tag-row" style="margin-top:12px;"><span class="tag">Python</span><span class="tag">OpenTelemetry</span><span class="tag">MCP</span><span class="tag">JSON Schema</span><span class="tag">AgenticLens</span><span class="tag">Agentic-Chaos</span><span class="tag">Agentic-Sidecar</span><span class="tag">Agentic-Evals</span><span class="tag">Control-Tower</span><span class="tag">Reliability</span></div>
+        <p style="font-size:13px;margin-top:12px;"><a href="https://deepagentlabs.io" target="_blank" rel="noopener">deepagentlabs.io →</a></p>
       </div>
       <div class="card">
-        <div class="label-sm" style="color:#b45309;">★ Featured</div>
-        <h3>AgenticEdAcademy</h3>
-        <p>Co-founder of an academy for agentic AI education and skills.</p>
-        <p style="font-size:13px;"><a href="https://agenticedacademy.com" target="_blank" rel="noopener">agenticedacademy.com →</a></p>
+        <h3>Microsoft Foundry Labs</h3>
+        <div class="label-sm">Hands-on Labs</div>
+        <p class="label-sm" style="margin-top:8px;">Creator</p>
+        <p>Hands-on labs and guides for building agents on Microsoft Foundry, from memory and evaluation to observability in production.</p>
+        <div class="tag-row" style="margin-top:12px;"><span class="tag">Microsoft Foundry</span><span class="tag">Python</span><span class="tag">Agents</span><span class="tag">Evals</span><span class="tag">Observability</span><span class="tag">RAG</span></div>
+        <p style="font-size:13px;margin-top:12px;"><a href="https://github.com/jothsnapraveena/Microsoft-Foundry-labs-handson" target="_blank" rel="noopener">GitHub →</a></p>
       </div>
     </div>
-    <div class="card">
+    <div class="card" style="margin-top:18px;">
       <p>Code, tooling, and open-source activity on GitHub — including MCP server integrations, agentic AI utilities, and data engineering projects.</p>
       <a class="btn btn-gold" href="https://github.com/jothsnapraveena" target="_blank" rel="noopener">View GitHub Profile →</a>
       <img class="gh-chart" src="https://ghchart.rshah.org/a9823a/jothsnapraveena" alt="Jothsna Praveena Pendyala's GitHub contributions graph">
