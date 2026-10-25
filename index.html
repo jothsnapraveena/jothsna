@@ -214,33 +214,42 @@
     section{break-inside:avoid;}
   }
 </style>
+<link rel="stylesheet" href="profile.css">
+<meta name="description" content="Jothsna Praveena Pendyala &#8212; AI Platform Architect, Senior Data Scientist, researcher, speaker, and community leader.">
+<link rel="stylesheet" href="avatar.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
+<nav aria-label="Main navigation">
   <div class="nav-inner">
-    <div class="nav-name">JOTHSNA PRAVEENA PENDYALA</div>
+    <a class="nav-name" href="#top">JOTHSNA PENDYALA</a>
     <div class="nav-links">
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#research">Research</a>
-      <a href="#awards">Awards</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#speaking">Speaking</a>
-      <a href="#contributions">Contributions</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#top">Home</a><a href="#summary">About Me</a><a href="#skills">Skills</a>
+      <a href="#experience">Experience</a><a href="#education">Qualifications</a>
+      <a href="#community">Community</a><a href="#contact">Contact</a>
+      <details class="nav-more"><summary>More</summary><div>
+        <a href="#research">Research &amp; Books</a><a href="#awards">Awards</a>
+        <a href="#leadership">Leadership</a><a href="#speaking">Speaking</a>
+        <a href="#contributions">Contributions</a>
+        <a href="work.html">Explore Work</a><a href="about.html">Full Profile</a><a href="collaborate.html">Collaborate</a>
+      </div></details>
     </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="hero-inner">
-    <div style="display:flex;flex-direction:column;align-items:center;">
-      <div class="avatar"><img src="images/Jothsna.png" alt="Jothsna Praveena Pendyala"></div>
-    </div>
+    <div class="avatar-wrap">
+      <div class="avatar-stage" id="avatarStage" title="Psst — click me">
+        <div class="bubble" id="bubble">Hi, I'm Jothsna! 👀<small>click me for more</small></div>
+        <img id="avatarImg" src="images/jothsna-avatar.jpg" alt="Illustrated avatar portrait of Jothsna">
+        <div class="sticker sticker-gold">AGENTIC AI ✦</div>
+        <div class="sticker sticker-teal">SPEAKER 🎤</div>
+      </div>
+      </div>
     <div class="hero-text">
+      <p class="eyebrow">Hello, I&#8217;m</p>
       <h1>Jothsna Praveena Pendyala</h1>
       <p class="hero-title">AI Platform Architect &nbsp;·&nbsp; Senior Data Scientist &nbsp;·&nbsp; ACM Dallas Chair &amp; Chief Editor</p>
       <div class="hero-meta">
@@ -249,18 +258,21 @@
         <span>jothsnapraveena1421@gmail.com</span>
       </div>
       <div class="hero-links">
+        <a class="primary-link" href="#contact">Contact Me &#8599;</a>
         <a href="https://www.linkedin.com/in/jothsna/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       </div>
     </div>
   </div>
+  <div style="max-width:var(--maxw);margin:auto;"><a class="scroll-link" href="#summary">&#8595; Scroll down</a></div>
 </header>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>AGENTIC AI <i>✦</i> LLM EVALS <i>✦</i> KUBERNETES <i>✦</i> OBSERVABILITY <i>✦</i> OPEN SOURCE <i>✦</i> SPEAKER <i>✦</i> GOVERNANCE <i>✦</i> RAG <i>✦</i> MCP SERVERS <i>✦</i> DEEPAGENTLABS <i>✦</i> AGENTICEDACADEMY <i>✦</i> </span><span>AGENTIC AI <i>✦</i> LLM EVALS <i>✦</i> KUBERNETES <i>✦</i> OBSERVABILITY <i>✦</i> OPEN SOURCE <i>✦</i> SPEAKER <i>✦</i> GOVERNANCE <i>✦</i> RAG <i>✦</i> MCP SERVERS <i>✦</i> DEEPAGENTLABS <i>✦</i> AGENTICEDACADEMY <i>✦</i> </span></div></div>
 
-<main>
+<main id="main">
 
   <section id="summary">
     <p class="eyebrow">Professional Summary</p>
-    <h2>Overview</h2>
+    <h2>About Me</h2>
     <p class="lede">
       Jothsna Praveena Pendyala is an AI Platform Architect and Senior Data Scientist at Infosys, serving as the
       principal architect of an enterprise Agentic AI platform at AT&amp;T — one of the largest telecommunications
@@ -282,11 +294,67 @@
       North America 2026.
     </p>
     <div class="stat-row">
-      <div class="stat"><div class="num">13+</div><div class="label">Years combined experience</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">Years of experience</div></div>
       <div class="stat"><div class="num">9+</div><div class="label">Peer-reviewed publications</div></div>
-      <div class="stat"><div class="num">30+</div><div class="label">Papers peer reviewed</div></div>
+      <div class="stat"><div class="num">50+</div><div class="label">Papers peer reviewed</div></div>
       <div class="stat"><div class="num">$1.1M</div><div class="label">Annual efficiency savings delivered</div></div>
       <div class="stat"><div class="num">7–8</div><div class="label">Engineers led at Infosys/AT&amp;T</div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="eyebrow">Capabilities</p>
+    <h2>Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-cat">
+        <div class="skill-cat-name">Agentic AI &amp; LLMs</div>
+        <div class="tag-row">
+          <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Multi-Agent Workflows</span>
+          <span class="tag">MCP Servers</span><span class="tag">Tool Integrations</span><span class="tag">RAG</span>
+          <span class="tag">Prompt Engineering</span><span class="tag">LLM Evaluation</span><span class="tag">Guardrails</span><span class="tag">LiteLLM</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Programming</div>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST APIs</span>
+          <span class="tag">React / JS</span><span class="tag">JSON</span><span class="tag">Regex</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Platform &amp; Infrastructure</div>
+        <div class="tag-row">
+          <span class="tag">Kubernetes (AKS)</span><span class="tag">Microservices</span><span class="tag">Autoscaling (HPA/KEDA)</span>
+          <span class="tag">Docker</span><span class="tag">Azure DevOps</span><span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Cloud</div>
+        <div class="tag-row">
+          <span class="tag">Azure</span><span class="tag">AWS Bedrock</span><span class="tag">SageMaker</span>
+          <span class="tag">AWS Glue</span><span class="tag">Redshift</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Observability</div>
+        <div class="tag-row">
+          <span class="tag">LangSmith</span><span class="tag">Arize</span><span class="tag">OpenTelemetry</span>
+          <span class="tag">Logging</span><span class="tag">Model Monitoring</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-name">Data &amp; ML</div>
+        <div class="tag-row">
+          <span class="tag">Machine Learning</span><span class="tag">NLP</span><span class="tag">Transformers</span>
+          <span class="tag">Feature Engineering</span><span class="tag">Model Deployment</span><span class="tag">ETL Pipelines</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-cat" style="grid-column:1/-1;">
+        <div class="skill-cat-name">Tools</div>
+        <div class="tag-row">
+          <span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span><span class="tag">Veracode</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -329,7 +397,7 @@
         <li>Collaborated directly with Amazon scientists to design guardrail strategies — prompt rephrasing, output constraints, and filtering — contributing to a measurable 18% improvement in factual accuracy</li>
         <li>Maintained a personal annotation accuracy score of 98%+ across all tasks</li>
         <li>Documented 50+ edge case resolution strategies to standardize handling of complex annotation scenarios</li>
-        <li>Filed 30+ actionable UI/UX improvement tickets; 3 major platform updates were implemented as a result</li>
+        <li>Filed 50+ actionable UI/UX improvement tickets; 3 major platform updates were implemented as a result</li>
       </ul>
     </div>
 
@@ -476,7 +544,7 @@
       <ul style="margin-top:10px;">
         <li>"Building a Generative AI Application: A Case Study on an AI Travel Planner," in <em>Generative AI in Software Development</em>, pp. 289–323, 2026</li>
         <li>Two forthcoming chapters, <em>Artificial Intelligence Agents in Industrial Orchestration</em>, Elsevier</li>
-        
+      </ul>
     </div>
   </section>
 
@@ -490,6 +558,37 @@
       <li><strong>Starshine Women Award</strong>, recognition through Infosys Women in Tech Series</li>
       
     </ul>
+  </section>
+
+  <section id="community">
+    <p class="eyebrow">Sharing knowledge &amp; supporting innovation</p>
+    <h2>Mentoring, Judging &amp; Organizing</h2>
+    <div class="community-grid">
+      <article class="community-item">
+        <h3>Mentoring</h3>
+        <h4>ACM Dallas Chapter</h4>
+        <p>Runs mentoring sessions connecting early-career technologists with experienced practitioners.</p>
+        <p>Supports professional development through community programming in AI, cloud computing, and software engineering.</p>
+      </article>
+      <article class="community-item">
+        <h3>Judging</h3>
+        <h4>2026 IEEE CTU Challenge</h4>
+        <p>Judge for the 2026 IEEE Connecting the Unconnected (CTU) Challenge, a global competition organized by the IEEE Future Networks Technical Community to advance innovative solutions that bridge the digital divide and expand broadband access.</p>
+        <p><a href="https://ctu.ieee.org/" target="_blank" rel="noopener">About the IEEE CTU Challenge &#8599;</a></p>
+        <h4>Buildverse</h4>
+        <p>Served as a judge at Buildverse.</p>
+        <h4>Peer Review &amp; Technical Evaluation</h4>
+        <p>Reviewer for 50+ scientific publications across AI, machine learning, data science, and related fields.</p>
+        <a href="#leadership">More reviewing &amp; editorial service &#8594;</a>
+      </article>
+      <article class="community-item">
+        <h3>Organizing</h3>
+        <h4>ACM Dallas Chapter</h4>
+        <p>As Chair &amp; Chief Editor, organizes technical workshops and shapes the chapter&#8217;s innovation programming.</p>
+        <h4>IEEE Women in Engineering</h4>
+        <p>As Vice Chair, leads programming and professional development initiatives for women in engineering and technology.</p>
+      </article>
+    </div>
   </section>
 
   <section id="leadership">
@@ -522,7 +621,7 @@
 
     <h3 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:32px 0 14px;">Judging, Reviewing &amp; Editorial Service</h3>
     <ul>
-      <li>Peer reviewer for 30+ scientific publications submitted to IEEE and Scopus-indexed journals and international conferences across AI, ML, data science, NLP, agentic AI, and computer vision</li>
+      <li>Peer reviewer for 50+ scientific publications submitted to IEEE and Scopus-indexed journals and international conferences across AI, ML, data science, NLP, agentic AI, and computer vision</li>
       <li>Primary editor of the forthcoming <em>RAG in Action</em> book — proposal ownership, author selection, review of 11 chapters, and manuscript submission to Taylor &amp; Francis</li>
       <li>Quarterly architecture reviewer for enterprise Agentic AI platform features and services proposed by product owners across multiple teams</li>
       <li>Daily code reviewer for a team of 7–8 senior data scientists on production platform work</li>
@@ -593,65 +692,58 @@
     <img class="gh-chart" src="https://ghchart.rshah.org/a9823a/jothsnapraveena" alt="Jothsna Praveena Pendyala's GitHub contributions graph">
   </section>
 
-  <section id="skills">
-    <p class="eyebrow">Capabilities</p>
-    <h2>Technical Skills</h2>
-    <div class="skill-grid">
-      <div class="skill-cat">
-        <div class="skill-cat-name">Agentic AI &amp; LLMs</div>
-        <div class="tag-row">
-          <span class="tag">LangGraph</span><span class="tag">LangChain</span><span class="tag">Multi-Agent Workflows</span>
-          <span class="tag">MCP Servers</span><span class="tag">Tool Integrations</span><span class="tag">RAG</span>
-          <span class="tag">Prompt Engineering</span><span class="tag">LLM Evaluation</span><span class="tag">Guardrails</span><span class="tag">LiteLLM</span>
-        </div>
+
+
+<section>
+    <h2>Featured <span class="hl">work</span></h2>
+    <div class="grid">
+      <div class="card">
+        <h3>DeepAgentLabs</h3>
+        <div class="label-sm">AgenticOps</div>
+        <p class="label-sm" style="margin-top:8px;">Co-founder</p>
+        <p>Observe, evaluate, stress-test, supervise and operate production agentic AI workflows.</p>
+        <div class="tag-row" style="margin-top:12px;"><span class="tag">Python</span><span class="tag">OpenTelemetry</span><span class="tag">MCP</span><span class="tag">JSON Schema</span><span class="tag">AgenticLens</span><span class="tag">Agentic-Chaos</span><span class="tag">Agentic-Sidecar</span><span class="tag">Agentic-Evals</span><span class="tag">Control-Tower</span><span class="tag">Reliability</span></div>
+        <p style="font-size:13px;margin-top:12px;"><a href="https://deepagentlabs.io" target="_blank" rel="noopener">deepagentlabs.io →</a></p>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-name">Programming</div>
-        <div class="tag-row">
-          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST APIs</span>
-          <span class="tag">React / JS</span><span class="tag">JSON</span><span class="tag">Regex</span>
-        </div>
+      <div class="card">
+        <h3>Microsoft Foundry Labs</h3>
+        <div class="label-sm">Hands-on Labs</div>
+        <p class="label-sm" style="margin-top:8px;">Creator</p>
+        <p>Hands-on labs and guides for building agents on Microsoft Foundry, from memory and evaluation to observability in production.</p>
+        <div class="tag-row" style="margin-top:12px;"><span class="tag">Microsoft Foundry</span><span class="tag">Python</span><span class="tag">Agents</span><span class="tag">Evals</span><span class="tag">Observability</span><span class="tag">RAG</span></div>
+        <p style="font-size:13px;margin-top:12px;"><a href="https://github.com/jothsnapraveena/Microsoft-Foundry-labs-handson" target="_blank" rel="noopener">GitHub →</a></p>
       </div>
-      <div class="skill-cat">
-        <div class="skill-cat-name">Platform &amp; Infrastructure</div>
-        <div class="tag-row">
-          <span class="tag">Kubernetes (AKS)</span><span class="tag">Microservices</span><span class="tag">Autoscaling (HPA/KEDA)</span>
-          <span class="tag">Docker</span><span class="tag">Azure DevOps</span><span class="tag">GitHub Actions</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-name">Cloud</div>
-        <div class="tag-row">
-          <span class="tag">Azure</span><span class="tag">AWS Bedrock</span><span class="tag">SageMaker</span>
-          <span class="tag">AWS Glue</span><span class="tag">Redshift</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-name">Observability</div>
-        <div class="tag-row">
-          <span class="tag">LangSmith</span><span class="tag">Arize</span><span class="tag">OpenTelemetry</span>
-          <span class="tag">Logging</span><span class="tag">Model Monitoring</span>
-        </div>
-      </div>
-      <div class="skill-cat">
-        <div class="skill-cat-name">Data &amp; ML</div>
-        <div class="tag-row">
-          <span class="tag">Machine Learning</span><span class="tag">NLP</span><span class="tag">Transformers</span>
-          <span class="tag">Feature Engineering</span><span class="tag">Model Deployment</span><span class="tag">ETL Pipelines</span><span class="tag">SQL</span>
-        </div>
-      </div>
-      <div class="skill-cat" style="grid-column:1/-1;">
-        <div class="skill-cat-name">Tools</div>
-        <div class="tag-row">
-          <span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span><span class="tag">Veracode</span>
-        </div>
-      </div>
+    </div>
+    <p style="font-size:13px;"><a href="work.html">Explore all work →</a></p>
+  </section>
+<section>
+    <h2>Latest <span class="hl">talk</span></h2>
+    <div class="card">
+      <div class="label-sm">Conference Talk</div>
+      <h3>Building Reliable Agentic Platforms on Kubernetes: Beyond Pod Health</h3>
+      <p style="font-size:13px;opacity:.7;">SREday Dallas Q4 · evolv consulting HQ, Dallas, TX · October 23, 2026</p>
+      <p>Healthy pods don't mean completed tasks. This talk covered the platform controls that make agentic systems reliable in production — durable checkpoints, idempotency contracts, and quota-bounded autoscaling — with three real failure scenarios: a worker terminating mid-task, model rate-limits, and a tool timing out after changing an external system.</p>
+      <img class="media-photo" src="images/sreday-talk.jpg" alt="Jothsna Praveena Pendyala presenting at SREday Dallas Q4 2026">
+      <p class="media-photo-cap">Presenting at SREday Dallas Q4, October 2026</p>
+      <img class="media-photo" src="images/sreday-group.jpg" alt="Jothsna Praveena Pendyala with fellow SREday Dallas Q4 2026 participants">
+      <p class="media-photo-cap">With fellow SREday Dallas Q4 2026 participants</p>
+      <p style="font-size:13px;"><a href="https://sreday.com/2026-dallas-q4/" target="_blank" rel="noopener">Event listing →</a></p>
+    </div>
+    <p style="font-size:13px;"><a href="speaking.html">All talks →</a></p>
+  </section>
+  <section id="contact">
+    <p class="eyebrow">Get in touch</p>
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+      <div><h3>Email</h3><a href="mailto:jothsnapraveena1421@gmail.com">jothsnapraveena1421@gmail.com</a></div>
+      <div><h3>Call Me</h3><a href="tel:+17745199029">774-519-9029</a></div>
+      <div><h3>Location</h3><p>Dallas, TX</p><a href="https://www.linkedin.com/in/jothsna/" target="_blank" rel="noopener">Connect on LinkedIn &#8599;</a></div>
     </div>
   </section>
 
 </main>
 
-<footer id="contact">
+<footer>
   <div style="font-weight:600;color:#fff;font-size:15px;margin-bottom:6px;">Jothsna Praveena Pendyala</div>
   <div>Dallas, TX &nbsp;·&nbsp; 774-519-9029 &nbsp;·&nbsp; <a href="mailto:jothsnapraveena1421@gmail.com">jothsnapraveena1421@gmail.com</a></div>
   <div style="margin-top:8px;">
@@ -659,8 +751,9 @@
     &nbsp;·&nbsp;
     <a href="https://scholar.google.com/citations?user=VL0J3I8AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
   </div>
-  <div class="updated">Portfolio last updated July 2026</div>
+  <div class="updated">Portfolio last updated October 2026</div>
 </footer>
 
+<script src="avatar.js"></script>
 </body>
 </html>

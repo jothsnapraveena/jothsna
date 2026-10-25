@@ -1,0 +1,47 @@
+  /* avatar */
+  .avatar-wrap{position:relative;flex-shrink:0;margin:0 auto;text-align:center;}
+  .avatar-stage{
+    width:min(330px,80vw);margin:0 auto;position:relative;cursor:pointer;
+    transition:transform .25s ease-out;will-change:transform;
+  }
+  #avatarImg{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;
+    border:3px solid var(--ink);border-radius:170px 170px 22px 22px;box-shadow:6px 6px 0 var(--ink);
+  }
+  .bubble{
+    position:absolute;left:50%;transform:translateX(-50%) rotate(-2deg);top:-8px;
+    background:var(--paper);color:var(--ink);border:2.5px solid var(--ink);border-radius:16px;
+    padding:10px 16px;font-weight:800;font-size:14px;box-shadow:4px 4px 0 var(--ink);
+    max-width:280px;z-index:3;
+  }
+  .bubble::after{
+    content:"";position:absolute;left:50%;bottom:-9px;width:14px;height:14px;
+    background:var(--paper);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
+    transform:translateX(-50%) rotate(45deg);
+  }
+  .bubble small{display:block;font-weight:600;font-size:11px;opacity:.65;margin-top:2px;}
+  .sticker{
+    position:absolute;font-family:"Arial Black",Arial,sans-serif;font-size:12px;letter-spacing:.04em;
+    padding:7px 12px;border:2.5px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);z-index:3;
+  }
+  .sticker-gold{background:var(--gold);color:var(--ink);right:-8px;bottom:64px;transform:rotate(6deg);}
+  .sticker-teal{background:var(--teal);color:#fff;left:-14px;bottom:26px;transform:rotate(-7deg);}
+  .avatar-hint{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;opacity:.85;margin-top:8px;}
+  .avatar-hint b{color:var(--gold);}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    background:var(--ink);color:var(--cream);overflow:hidden;
+    border-bottom:3px solid var(--ink);padding:12px 0;white-space:nowrap;
+  }
+  .marquee-track{display:inline-block;animation:scroll 26s linear infinite;}
+  .marquee-track span{
+    font-family:"Arial Black",Arial,sans-serif;font-size:15px;letter-spacing:.06em;margin-right:28px;
+  }
+  .marquee-track span i{color:var(--gold);font-style:normal;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+
+.avatar-wrap{--ink:#16130f;--paper:#fff;--gold:#ffc53d;--teal:#0e7c7b;--cream:#fff6e9}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}.avatar-stage{transition:none}}
+

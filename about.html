@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jothsna Praveena Pendyala — About</title>
+<style>
+  :root{
+    --violet:#6d28d9;
+    --violet-deep:#5b21b6;
+    --cream:#fff6e9;
+    --paper:#ffffff;
+    --ink:#16130f;
+    --teal:#0e7c7b;
+    --gold:#ffc53d;
+    --pink:#ff8fa3;
+    --maxw:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;color:var(--ink);background-color:#fff6e9;background-image:radial-gradient(700px 420px at 12% -5%,rgba(109,40,217,.14),transparent 60%),radial-gradient(700px 460px at 92% 8%,rgba(244,114,182,.12),transparent 60%),radial-gradient(600px 600px at 50% 110%,rgba(109,40,217,.08),transparent 60%),linear-gradient(180deg,#fff6e9 0%,#f7f0ff 50%,#fff6e9 100%);background-attachment:fixed;
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--gold);color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:60;
+    background:var(--cream);border-bottom:3px solid var(--ink);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .nav-name{font-family:"Arial Black",Arial,sans-serif;font-size:15px;letter-spacing:.02em;}
+  .nav-name span{color:var(--violet);}
+  .nav-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:700;}
+  .nav-links a{text-decoration:none;padding:2px 0;border-bottom:2px solid transparent;}
+  .nav-links a:hover{color:var(--violet);border-bottom-color:var(--violet);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    background:var(--violet);color:var(--cream);
+    border-bottom:3px solid var(--ink);
+    position:relative;overflow:hidden;
+  }
+  header.hero::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;
+    border:3px dashed rgba(255,246,233,.5);border-radius:50%;pointer-events:none;
+  }
+  .hero-inner{
+    max-width:var(--maxw);margin:0 auto;padding:56px 24px 60px;
+    display:flex;gap:48px;align-items:center;flex-wrap:wrap;position:relative;z-index:1;
+  }
+  .hero-text{flex:1;min-width:300px;}
+  .eyebrow{
+    display:inline-block;background:var(--ink);color:var(--cream);
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.14em;
+    padding:6px 12px;border-radius:999px;margin:0 0 18px;transform:rotate(-1.5deg);
+  }
+  .hero-text h1{
+    font-family:"Arial Black",Arial,sans-serif;font-weight:900;
+    font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-.01em;margin:0 0 14px;
+  }
+  .hero-text h1 .outline{color:transparent;-webkit-text-stroke:2px var(--cream);}
+  .hero-role{font-size:19px;font-weight:700;margin:0 0 8px;}
+  .hero-sub{font-size:16px;opacity:.92;margin:0 0 20px;max-width:560px;}
+  .hero-meta{
+    display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;
+  }
+  .hero-meta span{background:rgba(255,246,233,.16);border:1.5px solid rgba(255,246,233,.55);padding:5px 11px;border-radius:999px;}
+  .hero-links{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:800;font-size:14px;
+    padding:11px 20px;border:2.5px solid var(--ink);border-radius:999px;
+    box-shadow:4px 4px 0 var(--ink);transition:transform .12s ease,box-shadow .12s ease;
+  }
+  .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink);}
+  .btn-gold{background:var(--gold);color:var(--ink);}
+  .btn-cream{background:var(--cream);color:var(--ink);}
+  .btn-teal{background:var(--teal);color:#fff;}
+
+  /* avatar */
+  .avatar-wrap{position:relative;flex-shrink:0;margin:0 auto;text-align:center;}
+  .avatar-stage{
+    width:min(330px,80vw);margin:0 auto;position:relative;cursor:pointer;
+    transition:transform .25s ease-out;will-change:transform;
+  }
+  #avatarImg{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;
+    border:3px solid var(--ink);border-radius:170px 170px 22px 22px;box-shadow:6px 6px 0 var(--ink);
+  }
+  .bubble{
+    position:absolute;left:50%;transform:translateX(-50%) rotate(-2deg);top:-8px;
+    background:var(--paper);color:var(--ink);border:2.5px solid var(--ink);border-radius:16px;
+    padding:10px 16px;font-weight:800;font-size:14px;box-shadow:4px 4px 0 var(--ink);
+    max-width:280px;z-index:3;
+  }
+  .bubble::after{
+    content:"";position:absolute;left:50%;bottom:-9px;width:14px;height:14px;
+    background:var(--paper);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
+    transform:translateX(-50%) rotate(45deg);
+  }
+  .bubble small{display:block;font-weight:600;font-size:11px;opacity:.65;margin-top:2px;}
+  .sticker{
+    position:absolute;font-family:"Arial Black",Arial,sans-serif;font-size:12px;letter-spacing:.04em;
+    padding:7px 12px;border:2.5px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);z-index:3;
+  }
+  .sticker-gold{background:var(--gold);color:var(--ink);right:-8px;bottom:64px;transform:rotate(6deg);}
+  .sticker-teal{background:var(--teal);color:#fff;left:-14px;bottom:26px;transform:rotate(-7deg);}
+  .avatar-hint{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;opacity:.85;margin-top:8px;}
+  .avatar-hint b{color:var(--gold);}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    background:var(--ink);color:var(--cream);overflow:hidden;
+    border-bottom:3px solid var(--ink);padding:12px 0;white-space:nowrap;
+  }
+  .marquee-track{display:inline-block;animation:scroll 26s linear infinite;}
+  .marquee-track span{
+    font-family:"Arial Black",Arial,sans-serif;font-size:15px;letter-spacing:.06em;margin-right:28px;
+  }
+  .marquee-track span i{color:var(--gold);font-style:normal;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- SECTIONS ---------- */
+  main{max-width:var(--maxw);margin:0 auto;padding:0 24px 20px;}
+  section{padding:56px 0 8px;}
+  .sec-label{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.16em;
+    color:var(--violet);font-weight:700;margin:0 0 6px;text-transform:uppercase;
+  }
+  h2{
+    font-family:"Arial Black",Arial,sans-serif;font-size:clamp(26px,4vw,36px);
+    margin:0 0 24px;line-height:1.05;
+  }
+  h2 .hl{background:linear-gradient(transparent 62%, var(--gold) 62%);}
+  h3{font-size:17px;margin:0 0 2px;}
+  p{margin:0 0 14px;}
+  .lede{font-size:18px;max-width:840px;}
+  .card{
+    background:var(--paper);border:2.5px solid var(--ink);border-radius:18px;
+    padding:22px 24px;box-shadow:5px 5px 0 var(--ink);margin-bottom:20px;
+  }
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;}
+  .stat{
+    flex:1;min-width:140px;background:var(--paper);border:2.5px solid var(--ink);border-radius:16px;
+    padding:16px 18px;box-shadow:4px 4px 0 var(--ink);
+  }
+  .stat .num{font-family:"Arial Black",Arial,sans-serif;font-size:28px;color:var(--violet);line-height:1.1;}
+  .stat .label{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.7;margin-top:4px;font-weight:700;}
+  .job-head{
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
+    border-bottom:2px dashed #d8cfc0;padding-bottom:8px;margin-bottom:10px;
+  }
+  .job-role{font-weight:800;font-size:16px;}
+  .job-org{font-size:14px;opacity:.75;}
+  .job-date{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;font-weight:700;
+    background:var(--gold);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;white-space:nowrap;
+  }
+  .job-client{font-size:13px;opacity:.7;font-style:italic;margin:4px 0 8px;}
+  ul{margin:0 0 8px;padding-left:20px;}
+  li{margin-bottom:6px;}
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  @media(max-width:680px){.grid-2{grid-template-columns:1fr;}}
+  .edu-degree{font-weight:800;font-size:15px;}
+  .edu-school{font-size:13px;opacity:.75;}
+  .cert-list{list-style:none;padding:0;margin:0;}
+  .cert-list li{padding:12px 0;border-bottom:2px dashed #d8cfc0;font-size:14px;}
+  .cert-list li:last-child{border-bottom:none;}
+  .cert-org{font-size:12.5px;opacity:.7;}
+  .pub{display:flex;gap:14px;padding:14px 0;border-bottom:2px dashed #d8cfc0;}
+  .pub:last-child{border-bottom:none;}
+  .pub-num{font-family:"Arial Black",Arial,sans-serif;color:var(--violet);font-size:13px;flex-shrink:0;width:26px;}
+  .pub-text{font-size:14.5px;}
+  .pub-venue{font-size:12.5px;opacity:.7;}
+  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-size:12.5px;font-weight:700;background:var(--cream);border:2px solid var(--ink);
+    padding:5px 12px;border-radius:999px;
+  }
+  .tag:hover{background:var(--gold);}
+  details.more{margin-top:10px;}
+  details.more summary{
+    cursor:pointer;font-size:13px;font-weight:800;color:var(--violet);
+    font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;
+  }
+  details.more summary:hover{text-decoration:underline;}
+  details.more ul{margin-top:10px;}
+  .core-skill{
+    background:#fff;border:3px solid;border-radius:20px;padding:22px 24px;
+    font-size:17px;line-height:1.35;
+  }
+  .core-skill span{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#475569;
+  }
+  .hero-mini-card{
+    background:#fff;border:3px solid var(--ink);border-radius:16px;
+    padding:14px 16px;box-shadow:4px 4px 0 var(--ink);margin-top:14px;text-align:left;
+  }
+  .hero-mini-card p{margin:8px 0 0;font-size:14px;line-height:1.5;}
+  .skill-cat-name{
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;
+    color:var(--violet);font-weight:700;margin-bottom:10px;text-transform:uppercase;
+  }
+  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;}
+  @media(max-width:680px){.skill-grid{grid-template-columns:1fr;}}
+  .media-photo{width:100%;max-width:460px;display:block;border:2.5px solid var(--ink);border-radius:14px;margin:14px 0;box-shadow:5px 5px 0 var(--ink);}
+  .media-photo-cap{font-size:12px;opacity:.7;margin-top:-6px;margin-bottom:12px;}
+  .label-sm{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--violet);letter-spacing:.1em;font-weight:700;text-transform:uppercase;}
+  .gh-chart{width:100%;margin-top:16px;border:2.5px solid var(--ink);border-radius:14px;background:#fff;}
+  footer{
+    background:var(--ink);color:var(--cream);padding:44px 24px;text-align:center;margin-top:48px;
+    border-top:3px solid var(--ink);
+  }
+  footer a{color:var(--gold);}
+  footer .foot-name{font-family:"Arial Black",Arial,sans-serif;font-size:18px;color:#fff;margin-bottom:8px;}
+  footer .updated{opacity:.6;font-size:11.5px;margin-top:12px;}
+  @media (prefers-reduced-motion: reduce){
+    .marquee-track{animation:none;}
+    *{transition:none !important;}
+  }
+</style>
+<link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name"><a href="index.html" style="color:inherit;text-decoration:none;">JOTHSNA<span>.</span>AI</a></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Explore Work</a>
+      <a href="research.html">Research</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="community.html">Community</a>
+      <a href="collaborate.html">Collaborate</a>
+    </div>
+  </div>
+</nav>
+<main>
+<section id="about">
+    <p class="sec-label">01 · About</p>
+    <h2>Building agentic AI <span class="hl">that survives production.</span></h2>
+    <p class="lede">
+      Jothsna Praveena Pendyala is an AI Platform Architect and Senior Data Scientist at Infosys, where she leads
+      an enterprise Agentic AI platform at AT&amp;T — production multi-agent systems on LangGraph, Azure Kubernetes
+      Service, and custom MCP servers. Previously on Amazon's AGI team, working on the Nova models. IEEE Senior
+      Member, Chair &amp; Chief Editor of ACM Dallas, and a published researcher in IEEE and Springer venues.
+    </p>
+    <p>
+      She is the co-founder of <a href="https://deepagentlabs.io" target="_blank" rel="noopener">DeepAgentLabs</a>,
+      a specification-first open-source ecosystem for AI operations, and of
+      <a href="https://agenticedacademy.com" target="_blank" rel="noopener">AgenticEdAcademy</a>,
+      an initiative for agentic AI education and skills.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="num">5</div><div class="label">Years of experience</div></div>
+      <div class="stat"><div class="num">9+</div><div class="label">Peer-reviewed publications</div></div>
+      <div class="stat"><div class="num">50+</div><div class="label">Papers peer reviewed</div></div>
+    </div>
+  </section>
+<section id="experience">
+    <p class="sec-label">02 · Professional Experience</p>
+    <h2>Professional <span class="hl">experience</span></h2>
+
+    <div class="card">
+      <div class="job-head">
+        <div><span class="job-role">Senior Data Scientist</span> — <span class="job-org">Infosys</span></div>
+        <div class="job-date">June 2025 – Present</div>
+      </div>
+      <div class="job-client">Client: AT&amp;T, Dallas, TX</div>
+      <p>Leads the enterprise Agentic AI platform at AT&amp;T — production multi-agent systems, from orchestration and tool integration to observability and governance.</p>
+      <div class="tag-row" style="margin-top:12px;"><span class="tag">LangGraph</span><span class="tag">MCP Servers</span><span class="tag">Azure Kubernetes Service</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">OpenTelemetry</span><span class="tag">LangSmith</span><span class="tag">Arize</span></div>
+      <ul>
+        <li>Serves as product owner for the AI platform — defines requirements, prioritizes the roadmap, and drives adoption across multiple business teams</li>
+        <li>Built and manages MCP (Model Context Protocol) servers enabling seamless integration of enterprise tools, APIs, and data sources within a unified agentic platform</li>
+        <li>Developed scalable backend services using Python and FastAPI; deployed on AKS with Kubernetes autoscaling (HPA/KEDA), supporting high-concurrency, low-latency production workloads</li>
+        <li>Implemented LLM guardrails (LiteLLM) and Veracode SAST/SCA security scanning for compliant, secure AI deployment</li>
+        <li>Manages CI/CD pipelines via Azure DevOps for automated deployments and consistent release management across environments</li>
+        <li>Leads stakeholder collaboration across product, engineering, and business units; drives platform adoption across the enterprise</li>
+      </ul>
+      <div class="job-client">Client: SageSure Insurance</div>
+      <ul>
+        <li>Built intelligent agents on Infosys Agentic Foundry to automate complex data mapping and consolidation from disparate spreadsheet and PDF sources into structured formats</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="job-head">
+        <div><span class="job-role">Machine Learning Specialist</span> — <span class="job-org">Amazon</span></div>
+        <div class="job-date">March 2025 – June 2025</div>
+      </div>
+      <div class="job-client">Amazon Nova · Artificial General Intelligence Team, Boston, MA</div>
+      <p>Multimodal training and evaluation data for Amazon Nova large language models, with guardrail strategies that improved factual accuracy.</p>
+      <div class="tag-row" style="margin-top:12px;"><span class="tag">Multimodal Data</span><span class="tag">LLM Evaluation</span><span class="tag">Guardrails</span></div>
+      <ul>
+        <li>Maintained a personal annotation accuracy score of 98%+ across all tasks</li>
+        <li>Documented 50+ edge case resolution strategies to standardize handling of complex annotation scenarios</li>
+        <li>Filed 30+ actionable UI/UX improvement tickets; 3 major platform updates were implemented as a result</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="job-head">
+        <div><span class="job-role">Machine Learning Intern</span> — <span class="job-org">Awesome LLC</span></div>
+        <div class="job-date">May 2024 – August 2024</div>
+      </div>
+      <div class="job-client">Talk to My Energy (TTME) Project, San Diego, CA</div>
+      <p>Conversational AI and RAG systems for energy customers — from fine-tuned models to production pipelines.</p>
+      <div class="tag-row" style="margin-top:12px;"><span class="tag">GPT-4o</span><span class="tag">RAG</span><span class="tag">AWS Glue</span><span class="tag">Redshift</span></div>
+      <ul>
+        <li>Fine-tuned GPT-4o on utility data and FAQs; delivered 20% improvement in response accuracy across 3,000+ interactions</li>
+        <li>Built ETL pipelines using AWS Glue and Redshift for model retraining; reduced manual preprocessing time by 25%</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="job-head">
+        <div><span class="job-role">Assistant Engineer / Energy Analyst</span> — <span class="job-org">TANGEDCO</span></div>
+        <div class="job-date">June 2019 – July 2023</div>
+      </div>
+      <div class="job-client">Chennai, India · Selected after ranking #2 among ~200,000 candidates in a state-level government engineering competitive examination</div>
+      <p>ML for energy demand forecasting and IoT-based predictive maintenance across grid infrastructure.</p>
+      <div class="tag-row" style="margin-top:12px;"><span class="tag">XGBoost</span><span class="tag">Random Forest</span><span class="tag">IoT</span></div>
+      <ul>
+        <li>Designed regulatory compliance reporting workflows ensuring 100% adherence to government-mandated operational performance standards</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="job-head">
+        <div><span class="job-role">Assistant Professor</span>, Electrical and Electronics Engineering</div>
+        <div class="job-date">July 2015 – May 2019</div>
+      </div>
+      <div class="job-client">National Engineering College (Kovilpatti) · Gokaraju Rangaraju Institute of Engineering &amp; Technology (Hyderabad) · R.N.G. Patel Institute of Technology / FETR (Bardoli)</div>
+      <ul>
+        <li>Taught engineering subjects, mentored students, and guided academic projects, building a foundation in technical teaching and mentorship</li>
+      </ul>
+    </div>
+  </section>
+<section id="education">
+    <p class="sec-label">03 · Education</p>
+    <h2><span class="hl">Education</span></h2>
+    <div class="card">
+        <div style="margin-bottom:16px;">
+          <div class="edu-degree">M.S., Data Analytics</div>
+          <div class="edu-school">Clark University, Worcester, MA · 2023–2024 · GPA 3.9/4.0</div>
+        </div>
+        <div>
+          <div class="edu-degree">B.Tech, Electrical and Electronics Engineering</div>
+          <div class="edu-school">Jawaharlal Nehru Technological University, Kakinada, India · 2009–2013 · GPA 3.5/4.0</div>
+        </div>
+      </div>
+  </section>
+<section id="awards">
+    <p class="sec-label">04 · Awards & Recognition</p>
+    <h2>Awards &amp; <span class="hl">honors</span></h2>
+    <div class="card">
+      <ul style="list-style:none;padding:0;margin:0;">
+        <li style="padding:10px 0;border-bottom:2px dashed #d8cfc0;"><strong>Best Paper Award — DASGRI 2026</strong>, for "Multimodal Data Analytics: Advanced Fusion Architectures for Cross-Modal Sentiment Analysis and Customer Behavior Understanding," School of Computing, Goldsmiths, University of London, published by Springer (April 10–11, 2026). <a href="https://leedsjournal.co.uk/dasgri-2026/" target="_blank" rel="noopener">Conference media coverage</a></li>
+        <li style="padding:10px 0;border-bottom:2px dashed #d8cfc0;"><strong>Invited Panelist</strong>, Linux Foundation Open Source Summit + Embedded Linux Conference North America 2026, representing Infosys on production-ready AI agents</li>
+        <li style="padding:10px 0;border-bottom:2px dashed #d8cfc0;"><strong>Infosys InstaRise Award</strong> (special category), for exceptional performance, client engagement, and rapid implementation of proofs of concept</li>
+        <li style="padding:10px 0;"><strong>Starshine Women Award</strong>, recognition through Infosys Women in Tech Series</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="foot-name">Jothsna Praveena Pendyala</div>
+</footer>
+
+</body>
+</html>
+
