@@ -4,247 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Jothsna Praveena Pendyala — Speaking</title>
-<style>
-  :root{
-    --violet:#6d28d9;
-    --violet-deep:#5b21b6;
-    --cream:#fff6e9;
-    --paper:#ffffff;
-    --ink:#16130f;
-    --teal:#0e7c7b;
-    --gold:#ffc53d;
-    --pink:#ff8fa3;
-    --maxw:1040px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;color:var(--ink);background-color:#fff6e9;background-image:radial-gradient(700px 420px at 12% -5%,rgba(109,40,217,.14),transparent 60%),radial-gradient(700px 460px at 92% 8%,rgba(244,114,182,.12),transparent 60%),radial-gradient(600px 600px at 50% 110%,rgba(109,40,217,.08),transparent 60%),linear-gradient(180deg,#fff6e9 0%,#f7f0ff 50%,#fff6e9 100%);background-attachment:fixed;
-    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
-    line-height:1.6;-webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  a{color:inherit;}
-  ::selection{background:var(--gold);color:var(--ink);}
 
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky;top:0;z-index:60;
-    background:var(--cream);border-bottom:3px solid var(--ink);
-  }
-  .nav-inner{
-    max-width:var(--maxw);margin:0 auto;padding:14px 24px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  }
-  .nav-name{font-family:"Arial Black",Arial,sans-serif;font-size:15px;letter-spacing:.02em;}
-  .nav-name span{color:var(--violet);}
-  .nav-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;font-weight:700;}
-  .nav-links a{text-decoration:none;padding:2px 0;border-bottom:2px solid transparent;}
-  .nav-links a:hover{color:var(--violet);border-bottom-color:var(--violet);}
-
-  /* ---------- HERO ---------- */
-  header.hero{
-    background:var(--violet);color:var(--cream);
-    border-bottom:3px solid var(--ink);
-    position:relative;overflow:hidden;
-  }
-  header.hero::after{
-    content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;
-    border:3px dashed rgba(255,246,233,.5);border-radius:50%;pointer-events:none;
-  }
-  .hero-inner{
-    max-width:var(--maxw);margin:0 auto;padding:56px 24px 60px;
-    display:flex;gap:48px;align-items:center;flex-wrap:wrap;position:relative;z-index:1;
-  }
-  .hero-text{flex:1;min-width:300px;}
-  .eyebrow{
-    display:inline-block;background:var(--ink);color:var(--cream);
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.14em;
-    padding:6px 12px;border-radius:999px;margin:0 0 18px;transform:rotate(-1.5deg);
-  }
-  .hero-text h1{
-    font-family:"Arial Black",Arial,sans-serif;font-weight:900;
-    font-size:clamp(38px,6vw,64px);line-height:.98;letter-spacing:-.01em;margin:0 0 14px;
-  }
-  .hero-text h1 .outline{color:transparent;-webkit-text-stroke:2px var(--cream);}
-  .hero-role{font-size:19px;font-weight:700;margin:0 0 8px;}
-  .hero-sub{font-size:16px;opacity:.92;margin:0 0 20px;max-width:560px;}
-  .hero-meta{
-    display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;
-  }
-  .hero-meta span{background:rgba(255,246,233,.16);border:1.5px solid rgba(255,246,233,.55);padding:5px 11px;border-radius:999px;}
-  .hero-links{display:flex;gap:12px;flex-wrap:wrap;}
-  .btn{
-    display:inline-block;text-decoration:none;font-weight:800;font-size:14px;
-    padding:11px 20px;border:2.5px solid var(--ink);border-radius:999px;
-    box-shadow:4px 4px 0 var(--ink);transition:transform .12s ease,box-shadow .12s ease;
-  }
-  .btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink);}
-  .btn-gold{background:var(--gold);color:var(--ink);}
-  .btn-cream{background:var(--cream);color:var(--ink);}
-  .btn-teal{background:var(--teal);color:#fff;}
-
-  /* avatar */
-  .avatar-wrap{position:relative;flex-shrink:0;margin:0 auto;text-align:center;}
-  .avatar-stage{
-    width:min(330px,80vw);margin:0 auto;position:relative;cursor:pointer;
-    transition:transform .25s ease-out;will-change:transform;
-  }
-  #avatarImg{
-    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block;
-    border:3px solid var(--ink);border-radius:170px 170px 22px 22px;box-shadow:6px 6px 0 var(--ink);
-  }
-  .bubble{
-    position:absolute;left:50%;transform:translateX(-50%) rotate(-2deg);top:-8px;
-    background:var(--paper);color:var(--ink);border:2.5px solid var(--ink);border-radius:16px;
-    padding:10px 16px;font-weight:800;font-size:14px;box-shadow:4px 4px 0 var(--ink);
-    max-width:280px;z-index:3;
-  }
-  .bubble::after{
-    content:"";position:absolute;left:50%;bottom:-9px;width:14px;height:14px;
-    background:var(--paper);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
-    transform:translateX(-50%) rotate(45deg);
-  }
-  .bubble small{display:block;font-weight:600;font-size:11px;opacity:.65;margin-top:2px;}
-  .sticker{
-    position:absolute;font-family:"Arial Black",Arial,sans-serif;font-size:12px;letter-spacing:.04em;
-    padding:7px 12px;border:2.5px solid var(--ink);border-radius:999px;box-shadow:3px 3px 0 var(--ink);z-index:3;
-  }
-  .sticker-gold{background:var(--gold);color:var(--ink);right:-8px;bottom:64px;transform:rotate(6deg);}
-  .sticker-teal{background:var(--teal);color:#fff;left:-14px;bottom:26px;transform:rotate(-7deg);}
-  .avatar-hint{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;opacity:.85;margin-top:8px;}
-  .avatar-hint b{color:var(--gold);}
-
-  /* ---------- MARQUEE ---------- */
-  .marquee{
-    background:var(--ink);color:var(--cream);overflow:hidden;
-    border-bottom:3px solid var(--ink);padding:12px 0;white-space:nowrap;
-  }
-  .marquee-track{display:inline-block;animation:scroll 26s linear infinite;}
-  .marquee-track span{
-    font-family:"Arial Black",Arial,sans-serif;font-size:15px;letter-spacing:.06em;margin-right:28px;
-  }
-  .marquee-track span i{color:var(--gold);font-style:normal;}
-  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-  /* ---------- SECTIONS ---------- */
-  main{max-width:var(--maxw);margin:0 auto;padding:0 24px 20px;}
-  section{padding:56px 0 8px;}
-  .sec-label{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.16em;
-    color:var(--violet);font-weight:700;margin:0 0 6px;text-transform:uppercase;
-  }
-  h2{
-    font-family:"Arial Black",Arial,sans-serif;font-size:clamp(26px,4vw,36px);
-    margin:0 0 24px;line-height:1.05;
-  }
-  h2 .hl{background:linear-gradient(transparent 62%, var(--gold) 62%);}
-  h3{font-size:17px;margin:0 0 2px;}
-  p{margin:0 0 14px;}
-  .lede{font-size:18px;max-width:840px;}
-  .card{
-    background:var(--paper);border:2.5px solid var(--ink);border-radius:18px;
-    padding:22px 24px;box-shadow:5px 5px 0 var(--ink);margin-bottom:20px;
-  }
-  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px;}
-  .stat{
-    flex:1;min-width:140px;background:var(--paper);border:2.5px solid var(--ink);border-radius:16px;
-    padding:16px 18px;box-shadow:4px 4px 0 var(--ink);
-  }
-  .stat .num{font-family:"Arial Black",Arial,sans-serif;font-size:28px;color:var(--violet);line-height:1.1;}
-  .stat .label{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.7;margin-top:4px;font-weight:700;}
-  .job-head{
-    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;
-    border-bottom:2px dashed #d8cfc0;padding-bottom:8px;margin-bottom:10px;
-  }
-  .job-role{font-weight:800;font-size:16px;}
-  .job-org{font-size:14px;opacity:.75;}
-  .job-date{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;font-weight:700;
-    background:var(--gold);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;white-space:nowrap;
-  }
-  .job-client{font-size:13px;opacity:.7;font-style:italic;margin:4px 0 8px;}
-  ul{margin:0 0 8px;padding-left:20px;}
-  li{margin-bottom:6px;}
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  @media(max-width:680px){.grid-2{grid-template-columns:1fr;}}
-  .edu-degree{font-weight:800;font-size:15px;}
-  .edu-school{font-size:13px;opacity:.75;}
-  .cert-list{list-style:none;padding:0;margin:0;}
-  .cert-list li{padding:12px 0;border-bottom:2px dashed #d8cfc0;font-size:14px;}
-  .cert-list li:last-child{border-bottom:none;}
-  .cert-org{font-size:12.5px;opacity:.7;}
-  .pub{display:flex;gap:14px;padding:14px 0;border-bottom:2px dashed #d8cfc0;}
-  .pub:last-child{border-bottom:none;}
-  .pub-num{font-family:"Arial Black",Arial,sans-serif;color:var(--violet);font-size:13px;flex-shrink:0;width:26px;}
-  .pub-text{font-size:14.5px;}
-  .pub-venue{font-size:12.5px;opacity:.7;}
-  .tag-row{display:flex;flex-wrap:wrap;gap:8px;}
-  .tag{
-    font-size:12.5px;font-weight:700;background:var(--cream);border:2px solid var(--ink);
-    padding:5px 12px;border-radius:999px;
-  }
-  .tag:hover{background:var(--gold);}
-  details.more{margin-top:10px;}
-  details.more summary{
-    cursor:pointer;font-size:13px;font-weight:800;color:var(--violet);
-    font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.04em;
-  }
-  details.more summary:hover{text-decoration:underline;}
-  details.more ul{margin-top:10px;}
-  .core-skill{
-    background:#fff;border:3px solid;border-radius:20px;padding:22px 24px;
-    font-size:17px;line-height:1.35;
-  }
-  .core-skill span{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:#475569;
-  }
-  .hero-mini-card{
-    background:#fff;border:3px solid var(--ink);border-radius:16px;
-    padding:14px 16px;box-shadow:4px 4px 0 var(--ink);margin-top:14px;text-align:left;
-  }
-  .hero-mini-card p{margin:8px 0 0;font-size:14px;line-height:1.5;}
-  .skill-cat-name{
-    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.12em;
-    color:var(--violet);font-weight:700;margin-bottom:10px;text-transform:uppercase;
-  }
-  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;}
-  @media(max-width:680px){.skill-grid{grid-template-columns:1fr;}}
-  .media-photo{width:100%;max-width:460px;display:block;border:2.5px solid var(--ink);border-radius:14px;margin:14px 0;box-shadow:5px 5px 0 var(--ink);}
-  .media-photo-cap{font-size:12px;opacity:.7;margin-top:-6px;margin-bottom:12px;}
-  .label-sm{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--violet);letter-spacing:.1em;font-weight:700;text-transform:uppercase;}
-  .gh-chart{width:100%;margin-top:16px;border:2.5px solid var(--ink);border-radius:14px;background:#fff;}
-  footer{
-    background:var(--ink);color:var(--cream);padding:44px 24px;text-align:center;margin-top:48px;
-    border-top:3px solid var(--ink);
-  }
-  footer a{color:var(--gold);}
-  footer .foot-name{font-family:"Arial Black",Arial,sans-serif;font-size:18px;color:#fff;margin-bottom:8px;}
-  footer .updated{opacity:.6;font-size:11.5px;margin-top:12px;}
-  @media (prefers-reduced-motion: reduce){
-    .marquee-track{animation:none;}
-    *{transition:none !important;}
-  }
-</style>
-<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="profile.css?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="profile.js" defer></script>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <div class="nav-name"><a href="index.html" style="color:inherit;text-decoration:none;">JOTHSNA<span>.</span>AI</a></div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="work.html">Explore Work</a>
-      <a href="research.html">Research</a>
-      <a href="speaking.html">Speaking</a>
-      <a href="community.html">Community</a>
-      <a href="collaborate.html">Collaborate</a>
-    </div>
-  </div>
-</nav>
-<main>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation"><div class="nav-inner">
+ <a class="nav-name" href="index.html">jothsna<span>.ai</span></a>
+ <button class="menu-toggle" aria-expanded="false" aria-controls="site-menu" type="button">Menu</button>
+ <div class="nav-links" id="site-menu">
+ <a href="index.html">Home</a><a href="about.html">About</a><a href="work.html">Open Source</a><a href="research.html">Research</a><a href="speaking.html">Speaking</a><a href="community.html">Community</a><a class="nav-cta" href="collaborate.html">Contact</a>
+ </div><button class="theme-toggle" type="button" aria-label="Switch to light theme">&#9788;</button>
+ </div></nav>
+<main id="main">
 <section id="speaking">
     <p class="sec-label">01 · Speaking</p>
     <h2>Speaking &amp; <span class="hl">media</span></h2>
@@ -252,7 +27,7 @@
     <div class="card">
       <div class="label-sm">Conference Talk</div>
       <h3>Building Reliable Agentic Platforms on Kubernetes: Beyond Pod Health</h3>
-      <p style="font-size:13px;opacity:.7;">SREday Dallas Q4 · evolv consulting HQ, Dallas, TX · October 23, 2026</p>
+      <p style="font-size:13px;">SREday Dallas Q4 · evolv consulting HQ, Dallas, TX · October 23, 2026</p>
       <p>Healthy pods don't mean completed tasks. This talk covered the platform controls that make agentic systems reliable in production — durable checkpoints, idempotency contracts, and quota-bounded autoscaling — with three real failure scenarios: a worker terminating mid-task, model rate-limits, and a tool timing out after changing an external system.</p>
       <img class="media-photo" src="images/sreday-talk.jpg" alt="Jothsna Praveena Pendyala presenting at SREday Dallas Q4 2026">
       <p class="media-photo-cap">Presenting at SREday Dallas Q4, October 2026</p>
@@ -264,7 +39,7 @@
     <div class="card">
       <div class="label-sm">Selected Speaker — Did Not Attend</div>
       <h3>Women in AI and Data Science Conference (WiADS) 2026</h3>
-      <p style="font-size:13px;opacity:.7;">University of Minnesota AI Hub · October 26, 2026</p>
+      <p style="font-size:13px;">University of Minnesota AI Hub · October 26, 2026</p>
       <p>Selected as a speaker to present "Inference Optimization for Generative AI: Improving Cost, Latency, and Quality." She did not attend the event.</p>
       <p style="font-size:13px;"><a href="https://lnkd.in/p/geGzqHxW" target="_blank" rel="noopener">Speaker announcement →</a></p>
     </div>
@@ -272,7 +47,7 @@
     <div class="card">
       <div class="label-sm">Meetup Talk</div>
       <h3>Evals: One Does Not Simply Ship an Agent</h3>
-      <p style="font-size:13px;opacity:.7;">Plano Prompt Engineers · Improving, Plano, TX · July 22, 2026</p>
+      <p style="font-size:13px;">Plano Prompt Engineers · Improving, Plano, TX · July 22, 2026</p>
       <p>Hands-on workshop on eval frameworks for AI agents — task definitions, deterministic and LLM-as-judge graders, and iterative improvement, built around a Claude-powered shopping assistant.</p>
       <img class="media-photo" src="images/prompt%20engineers.jpg" alt="Jothsna Praveena Pendyala presenting at the Plano Prompt Engineers meetup, July 2026">
       <p class="media-photo-cap">Presenting at Plano Prompt Engineers, July 2026</p>
@@ -282,7 +57,7 @@
     <div class="card">
       <div class="label-sm">Meetup Talk</div>
       <h3>Scaling AI Workloads on K8s: Reliability Patterns for Prod. Agentic Platforms</h3>
-      <p style="font-size:13px;opacity:.7;">Kubernetes and Cloud Native North Dallas · Improving, Plano, TX · July 16, 2026</p>
+      <p style="font-size:13px;">Kubernetes and Cloud Native North Dallas · Improving, Plano, TX · July 16, 2026</p>
       <p>Production challenges in AI agent deployment on Azure Kubernetes Service — horizontal scalability across heterogeneous AI workloads and reliability patterns for cluster management.</p>
       <img class="media-photo" src="images/kubernetes%20meetup.jpg" alt="Jothsna Praveena Pendyala presenting at the Kubernetes and Cloud Native North Dallas meetup, July 2026">
       <p class="media-photo-cap">Presenting at Kubernetes and Cloud Native North Dallas, July 2026</p>
@@ -292,7 +67,7 @@
     <div class="card">
       <div class="label-sm">Conference Panel</div>
       <h3>Open Source Summit + Embedded Linux Conference North America 2026</h3>
-      <p style="font-size:13px;opacity:.7;">Linux Foundation · May 19, 2026</p>
+      <p style="font-size:13px;">Linux Foundation · May 19, 2026</p>
       <p>Invited panelist for "Building an Enterprise Platform for Production-Ready AI Agents," alongside panelists from SAS, DeployHub, and Southwest Airlines.</p>
       <img class="media-photo" src="images/OSS.jpg" alt="Jothsna Praveena Pendyala on the panel discussion stage at Open Source Summit North America 2026">
       <p class="media-photo-cap">Panel discussion, Open Source Summit North America 2026</p>

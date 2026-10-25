@@ -1,0 +1,4 @@
+
+# Local browser verification artifacts
+.preview-browser/
+preview-*.png
